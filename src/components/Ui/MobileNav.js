@@ -1,7 +1,7 @@
 
 
 
-const Product = () => {
+const MobileNav = () => {
     return (
         <>
 
@@ -9,4 +9,4 @@ const Product = () => {
     )
 }
 
-export default Product;
+export default MobileNav;
