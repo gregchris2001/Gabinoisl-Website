@@ -10,6 +10,7 @@ import Contact from "./components/Pages/Contact";
 import Pages from "./components/Pages/Pages";
 import Product from "./components/Pages/Product";
 import Shop from "./components/Pages/Shop";
+import Search from "./components/Pages/Search";
 
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
       {
         path: "/shop/:category",
         element: <Shop />
+      },
+      {
+        path: "/search",
+        element: <Search />
       }
     ],
 
