@@ -1,6 +1,6 @@
 import GabinoislHome from '../../images/gabinoisl-home.png';
 import { Card } from 'react-bootstrap';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 
