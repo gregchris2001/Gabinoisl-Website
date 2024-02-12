@@ -28,7 +28,12 @@ const Caurosel = () => {
 
   return (
     <Card>
-      <Card.Img variant="top" src={GabinoislHome} alt="GabinoIsl Home" />
+      <Card.Img
+        variant="top"
+        src={GabinoislHome}
+        alt="GabinoIsl Home"
+        style={{ height: "50rem" }}
+      />
 
       <Card.Body
         style={{
