@@ -1,10 +1,22 @@
 import { NavLink } from "react-router-dom";
 import { Nav, Navbar, Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import SearchModal from './Home/SearchModal'
 
 import Gabinoisl from "../../images/gabinoisl-logo.png";
 
 const Header = () => {
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const searchHandler = (e) => {
+    e.preventDefault();
+    handleShow();
+  }
+
   return (
     <header>
       <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
@@ -98,7 +110,7 @@ const Header = () => {
           </Navbar.Collapse>
           <Nav style={{ flexDirection: "row", gap: "1rem" }}>
             <NavLink
-              to="/search"
+              onClick={searchHandler}
               exact
               className="nav-link"
               style={{ color: "white" }}
@@ -116,6 +128,11 @@ const Header = () => {
           </Nav>
         </Container>
       </Navbar>
+      <SearchModal 
+        handleClose={handleClose}
+        show={show}
+      />
+
     </header>
   );
 };
