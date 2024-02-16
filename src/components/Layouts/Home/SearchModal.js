@@ -9,7 +9,7 @@ function SearchModal({handleClose, show}) {
 
   const submitHandler = () => {
     handleClose();
-    navigate(`/shop/${product}`)
+    navigate(`/search/${product}`)
   }
 
   return (
