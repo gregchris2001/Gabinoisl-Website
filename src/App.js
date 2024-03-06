@@ -1,7 +1,7 @@
 import "./App.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
-import RootLayout from "./components/Layouts/RootLayout"
+import RootLayout from "./components/Layouts/RootLayout";
 import Home from "./components/Pages/Home";
 import About from "./components/Pages/About";
 import Cart from "./components/Pages/Cart";
@@ -12,27 +12,27 @@ import Product from "./components/Pages/Product";
 import Shop from "./components/Pages/Shop";
 import Search from "./components/Pages/Search";
 
-import ProductImg from './images/product-img.png';
+import ProductImg from "./images/product-img.png";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { useContext } from "react";
 import ProductContext from "./store/product-context";
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fas } from '@fortawesome/free-solid-svg-icons'
-import { faFontAwesome } from '@fortawesome/free-brands-svg-icons'
-library.add(fas, faFontAwesome)
-
-const { changeProductData } = useContext(ProductContext)
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { faFontAwesome } from "@fortawesome/free-brands-svg-icons";
+library.add(fas, faFontAwesome);
 
 const products = [
-  { title : 'Luxury Solar System Spiral Raindrop Chandelier For Foyer and Entryway', 
-      img : ProductImg, 
-      price : '55,000'
-  }
+  {
+    title:
+      "Luxury Solar System Spiral Raindrop Chandelier For Foyer and Entryway",
+    description:
+      "Luxury Solar System Spiral Raindrop Chandelier For Foyer and Entryway",
+    img: ProductImg,
+    price: "55,000",
+  },
 ];
-
-changeProductData(products);
 
 const router = createBrowserRouter([
   {
@@ -43,46 +43,49 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />
+        element: <Home />,
       },
       {
         path: "/about",
-        element: <About />
+        element: <About />,
       },
       {
         path: "/cart",
-        element: <Cart />
+        element: <Cart />,
       },
       {
         path: "/checkout",
-        element: <Checkout />
+        element: <Checkout />,
       },
       {
         path: "/contact",
-        element: <Contact />
+        element: <Contact />,
       },
       {
         path: "/product/:item",
-        element: <Product />
+        element: <Product />,
       },
       {
         path: "/pages/:page",
-        element: <Pages />
+        element: <Pages />,
       },
       {
         path: "/shop/:category",
-        element: <Shop />
+        element: <Shop />,
       },
       {
         path: "/search/:product",
-        element: <Search />
-      }
+        element: <Search />,
+      },
     ],
-
-  }
+  },
 ]);
 
 function App() {
+  const { changeProductData } = useContext(ProductContext);
+
+  changeProductData(products);
+
   return <RouterProvider router={router}></RouterProvider>;
 }
 
