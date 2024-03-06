@@ -1,21 +1,17 @@
-import ProductImg from '../../../images/product-img.png';
 import ProductItem from './ProductItem';
+import ProductContext from '../../../store/product-context';
+import { useContext } from "react";
 
 const ProductList = () => {
 
-    const products = [
-        { title : 'Luxury Solar System Spiral Raindrop Chandelier For Foyer and Entryway', 
-            img : ProductImg, 
-            price : '55,000'
-        }
-    ];
+    const { productData } = useContext(ProductContext)
 
     return (
         <>
             <h1>Popular Product</h1>
 
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
-            {products.map((product, index) => (
+            {productData?.map((product, index) => (
                 <ProductItem 
                     key={index}
                     product={product}

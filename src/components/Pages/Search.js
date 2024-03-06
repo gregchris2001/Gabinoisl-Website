@@ -5,11 +5,15 @@ import ProductContext from '../../store/product-context';
 
 
 const Search = () => {
-
+    const [searchResults, setSearchResults] = useState([]);
     const { product } = useParams();
     const navigate = useNavigate();
 
     const { productData } = useContext(ProductContext)
+
+    useEffect(() => {
+        setSearchResults(searchProducts(productData, product))
+    }, [productData, product]);
 
     function searchProducts(productList, searchItem, threshold = 0.05) {
         // Filter products based on similarity scores
@@ -40,7 +44,6 @@ const Search = () => {
         return similarityScore;
     }
 
-    const searchResults = searchProducts(productData, product);
     console.log(searchResults);
 
     return (

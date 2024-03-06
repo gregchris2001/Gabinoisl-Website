@@ -12,14 +12,27 @@ import Product from "./components/Pages/Product";
 import Shop from "./components/Pages/Shop";
 import Search from "./components/Pages/Search";
 
+import ProductImg from './images/product-img.png';
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { useContext } from "react";
+import ProductContext from "./store/product-context";
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { faFontAwesome } from '@fortawesome/free-brands-svg-icons'
 library.add(fas, faFontAwesome)
 
+const { changeProductData } = useContext(ProductContext)
+
+const products = [
+  { title : 'Luxury Solar System Spiral Raindrop Chandelier For Foyer and Entryway', 
+      img : ProductImg, 
+      price : '55,000'
+  }
+];
+
+changeProductData(products);
 
 const router = createBrowserRouter([
   {
