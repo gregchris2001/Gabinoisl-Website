@@ -41,6 +41,7 @@ const Header = () => {
                 exact
                 className="nav-link"
                 style={{ color: "white" }}
+                state={{ value: 'type' }}
               >
                 Chandeliers
               </NavLink>
@@ -50,6 +51,7 @@ const Header = () => {
                 exact
                 className="nav-link"
                 style={{ color: "white" }}
+                state={{ value: 'type' }}
               >
                 Pendant Lights
               </NavLink>
@@ -59,6 +61,7 @@ const Header = () => {
                 exact
                 className="nav-link"
                 style={{ color: "white" }}
+                state={{ value: 'type' }}
               >
                 Dining Room Chandeliers
               </NavLink>
@@ -68,6 +71,7 @@ const Header = () => {
                 exact
                 className="nav-link"
                 style={{ color: "white" }}
+                state={{ value: 'type' }}
               >
                 Foyer Chandeliers
               </NavLink>
@@ -77,6 +81,7 @@ const Header = () => {
                 exact
                 className="nav-link"
                 style={{ color: "white" }}
+                state={{ value: 'type' }}
               >
                 Ceiling Fans
               </NavLink>
@@ -86,6 +91,7 @@ const Header = () => {
                 exact
                 className="nav-link"
                 style={{ color: "white" }}
+                state={{ value: 'type' }}
               >
                 Lamps
               </NavLink>
@@ -95,6 +101,7 @@ const Header = () => {
                 exact
                 className="nav-link"
                 style={{ color: "white" }}
+                state={{ value: 'room' }}
               >
                 Best Sellers
               </NavLink>
@@ -104,6 +111,7 @@ const Header = () => {
                 exact
                 className="nav-link"
                 style={{ color: "white" }}
+                state={{ value: 'room' }}
               >
                 New Arrival
               </NavLink>
