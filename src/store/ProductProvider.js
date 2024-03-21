@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ProductContext from './product-context';
 
-const AuthContextProvider = ({ children }) => {
+const ProductProvider = ({ children }) => {
   const [productData, setProductData] = useState([]);
   const [cartData, setCartData] = useState([]);
   const [recentlyViewed, setRecentlyViewed] = useState([]);
@@ -10,13 +10,22 @@ const AuthContextProvider = ({ children }) => {
     setProductData(state);
   }
 
-  const changeCartData = (state) => {
-    setCartData(state);
-  }
+  const changeCartData = (newCartData) => {
+    setCartData(prevCartData => [...prevCartData, newCartData]);
+  };
+  
+  const changeRecentlyViewed = (newRecentlyViewed) => {
+    setRecentlyViewed(prevRecentlyViewed => {
 
-  const changeRecentlyViewed = (state) => {
-    setRecentlyViewed(state);
-  }
+      if (prevRecentlyViewed.length >= 4) {
+        prevRecentlyViewed.shift(); // Remove the first item (oldest)
+      }
+
+      return [...prevRecentlyViewed, newRecentlyViewed];
+    });
+  };
+  
+  
 
   return (
     <ProductContext.Provider
@@ -34,4 +43,4 @@ const AuthContextProvider = ({ children }) => {
   );
 };
 
-export default AuthContextProvider;
+export default ProductProvider;

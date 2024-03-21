@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
 import ProductContext from "../../store/product-context";
+import ProductsWithPagination from "../Layouts/Home/ProductsWithPagination";
 
 const Search = () => {
   const [searchResults, setSearchResults] = useState([]);
@@ -51,7 +52,11 @@ const Search = () => {
 
   console.log(searchResults);
 
-  return <></>;
+  return (
+    <>
+      <ProductsWithPagination productData={searchResults} />
+    </>
+  );
 };
 
 export default Search;
