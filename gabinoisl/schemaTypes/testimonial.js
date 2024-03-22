@@ -29,10 +29,6 @@ export default defineType({
     select: {
       title: 'title',
       media: 'image',
-    },
-    prepare(selection) {
-      const {author} = selection
-      return {...selection, subtitle: author && `by ${author}`}
-    },
+    }
   },
 })
