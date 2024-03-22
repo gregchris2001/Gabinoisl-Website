@@ -5,9 +5,9 @@ import {schemaTypes} from './schemaTypes'
 
 export default defineConfig({
   name: 'default',
-  title: 'Gabinoisl',
+  title: 'gabinoisl',
 
-  projectId: 'chgy5qyd',
+  projectId: 'qb388cmd',
   dataset: 'production',
 
   plugins: [structureTool(), visionTool()],
