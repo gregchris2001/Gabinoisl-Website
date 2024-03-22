@@ -38,10 +38,7 @@ export default defineType({
       type: 'array',
       of: [
         {
-          // title: 'Block',
           type: 'block',
-          // styles: [{title: 'Normal', value: 'normal'}],
-          // lists: [],
         },
       ],
     }),

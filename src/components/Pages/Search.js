@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext, Children } from "react";
 import ProductContext from "../../store/product-context";
 import ProductsWithPagination from "../Layouts/Home/ProductsWithPagination";
 
@@ -17,12 +17,17 @@ const Search = () => {
   function searchProducts(productList, searchItem, threshold = 0.05) {
     // Filter products based on similarity scores
     const filteredProducts = productList
-      .map((product) => {
+      ?.map((product) => {
+        const descriptionText = product.description
+          .map((block) => block.children.map((child) => child.text).join(" "))
+          .join(" ");
+
         const nameScore = calculateSimilarityScore(product.title, searchItem);
         const descriptionScore = calculateSimilarityScore(
-          product.description,
+          descriptionText,
           searchItem
         );
+
         const totalScore = (nameScore + descriptionScore) / 2; // Average score
         return { ...product, score: totalScore };
       })
