@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ProductContext from './product-context';
 
 const ProductProvider = ({ children }) => {
@@ -6,12 +6,40 @@ const ProductProvider = ({ children }) => {
   const [cartData, setCartData] = useState([]);
   const [recentlyViewed, setRecentlyViewed] = useState([]);
 
+  // Load recently viewed data from local storage on component mount
+  useEffect(() => {
+    const storedRecentlyViewed = localStorage.getItem('recentlyViewed');
+    if (storedRecentlyViewed) {
+      setRecentlyViewed(JSON.parse(storedRecentlyViewed));
+    }
+  }, []);
+
+  // Save recently viewed data to local storage whenever it updates
+  useEffect(() => {
+    localStorage.setItem('recentlyViewed', JSON.stringify(recentlyViewed));
+  }, [recentlyViewed]);
+
   const changeProductData = (state) => {
     setProductData(state);
   }
 
-  const changeCartData = (newCartData) => {
+  const addCartData = (newCartData) => {
     setCartData(prevCartData => [...prevCartData, newCartData]);
+  };
+
+  const removeCartData = (productIdToRemove) => {
+    setCartData(prevCartData => prevCartData.filter(product => product.id !== productIdToRemove));
+  };
+
+  const changeCartProductQuantity = (productId, newQuantity) => {
+    setCartData(prevCartData => {
+      return prevCartData.map(product => {
+        if (product.id === productId) {
+          return { ...product, quantity: newQuantity };
+        }
+        return product;
+      });
+    });
   };
   
   const changeRecentlyViewed = (newRecentlyViewed) => {
@@ -33,7 +61,9 @@ const ProductProvider = ({ children }) => {
         productData: productData,
         changeProductData: changeProductData,
         cartData: cartData,
-        changeCartData: changeCartData,
+        addCartData: addCartData,
+        removeCartData: removeCartData,
+        changeCartProductQuantity: changeCartProductQuantity,
         recentlyViewed: recentlyViewed,
         changeRecentlyViewed: changeRecentlyViewed,
       }}
