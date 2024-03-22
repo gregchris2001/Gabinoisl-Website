@@ -1,6 +1,7 @@
 import { useLocation, useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
 import ProductContext from "../../store/product-context";
+import ProductsWithPagination from "../Layouts/Home/ProductsWithPagination";
 
 const Shop = () => {
     const [shopResults, setShopResults] = useState([]);
@@ -25,7 +26,7 @@ const Shop = () => {
 
     return (
         <>
-
+            <ProductsWithPagination productData={shopResults} />
         </>
     )
 }
