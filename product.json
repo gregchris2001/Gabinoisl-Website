@@ -1,20 +1,1882 @@
 [
-    {
-     "img": "", 
-     "title": "Gb344*2 THE RVM TWO-LAYERED PENDANT 2",
-      "description": "This minimalist two-layered LED pendant lamp is a sleek and contemporary lighting fixture designed with simplicity and functionality in mind. Within the outer frame, the inner layer holds the LED light source. The inner layer is designed to be unobtrusive, with a subtle profile that doesn't detract from the lamp's overall simplicity. The LED light source is energy-efficient, providing a soft and warm illumination that enhances the ambient lighting in any space. The pendant lamp is typically suspended from a thin and discreet cable, adding to the illusion of weightlessness and contributing to the overall minimalist effect.",
-      "feature": [
-        {"Material and Process": "Iron / glass shade"},
-        {"Material": "Polycarbonate"},
-        {"Fit for": "bed room, sitting room lounges"},
-        {"Installation type": "Flush mount"},
-        {"size": "⦲80xH150 (80+60)"},
-        {"The sling can be adjusted in height and can be removed as a ceiling light": true},
-        {"Product wattage": "LED185W"}
-      ],
-      "type" : "",
-      "room" : "",
-      "class" : ""
+  {
+    "price": "68,000",
+    "total_quantity": 4,
+    "type": "Ceiling Light",
+    "room": null,
+    "class": null,
+    "slug": {
+      "current": "gb405-the-pag",
+      "_type": "slug"
+    },
+    "title": "GB405 THE PAG",
+    "images": [
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/00d5399445029399b1d66fbace6bf59dbb960635-1200x1600.jpg"
+        }
+      }
+    ],
+    "description": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "_key": "1efca66f9ff1",
+        "markDefs": [],
+        "children": [
+          {
+            "marks": [],
+            "text": "Discover the charm of a vintage country style light, a timeless fixture that brings a touch of rustic elegance to your space. The country style aesthetic makes it a perfect addition to the Kitchen, Dining or anywhere you desire a cosy inviting atmosphere.",
+            "_key": "08aedcdb742c0",
+            "_type": "span"
+          }
+        ]
+      }
+    ],
+    "features": [
+      {
+        "name": "Wire Length",
+        "value": "70cm"
+      },
+      {
+        "name": "Material",
+        "value": " Iron, Metal, Hemp rope"
+      },
+      {
+        "name": "Light Source",
+        "value": "LED bulb/ Energy saving "
+      }
+    ]
+  },
+  {
+    "images": [
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/1fcad1759756839c5ec44e26fdf398a6951a982c-1200x1600.jpg"
+        }
+      }
+    ],
+    "price": "170,000",
+    "total_quantity": 1,
+    "class": null,
+    "slug": {
+      "current": "gb353-the-nsb-pendant",
+      "_type": "slug"
+    },
+    "title": "GB353 THE NSB PENDANT",
+    "description": [
+      {
+        "style": "normal",
+        "_key": "65592164a6f1",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "This modern LED chandelier creates a unique visual experience for a space with creativity and artistry.",
+            "_key": "4294ed929ffe0"
+          }
+        ],
+        "_type": "block"
+      },
+      {
+        "_key": "8d059fbc2efd",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "This is perfect for living rooms, bedrooms, foyers, kitchen islands and more, it certainly adds style and class to your space.",
+            "_key": "cc62dfa8dfa60"
+          }
+        ],
+        "_type": "block",
+        "style": "normal"
+      }
+    ],
+    "features": [
+      {
+        "name": "Colour",
+        "value": "Coated gold"
+      },
+      {
+        "name": "Size",
+        "value": "Big ⦰ 100 * H150 { Small ⦰ 80 *H150}"
+      }
+    ],
+    "type": "Pendant Lighting",
+    "room": "Living Room"
+  },
+  {
+    "class": null,
+    "slug": {
+      "current": "gb415-the-kuno-pendant",
+      "_type": "slug"
+    },
+    "title": "GB415 THE KUNO PENDANT",
+    "description": [
+      {
+        "_key": "060012991aef",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "Introducing Nordic sophistication with this 3-head long bar light chandelier,blending sleek design and minimalist elegance for a contemporary piece.",
+            "_key": "de2349a956cb0"
+          }
+        ],
+        "_type": "block",
+        "style": "normal"
+      },
+      {
+        "children": [
+          {
+            "text": "Elevate your space seamlessly combining modern design and create a stylish focal point in any room",
+            "_key": "af6efce669b10",
+            "_type": "span",
+            "marks": []
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "b51089c81d25",
+        "markDefs": []
+      },
+      {
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "Suitable areas: hotel rooms, study, dining.",
+            "_key": "4f16f5aa97ed0"
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "60d53157969d",
+        "markDefs": []
+      }
+    ],
+    "price": "45,000",
+    "features": [
+      {
+        "name": "Material",
+        "value": "Stainless Steel"
+      }
+    ],
+    "total_quantity": 1,
+    "room": "Dining Room",
+    "images": [
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/662451ac600fb0c64283f66cf4abe3e6e5c0d653-1200x1600.jpg"
+        }
+      }
+    ],
+    "type": "Pendant Lighting"
+  },
+  {
+    "slug": {
+      "current": "gb314-the-gab-ics",
+      "_type": "slug"
+    },
+    "images": [
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/77823aaee67f4a2696b025b83329cc171697a938-1200x1600.jpg"
+        }
+      }
+    ],
+    "features": [
+      {
+        "name": "Colour",
+        "value": "Black"
+      },
+      {
+        "name": "Size",
+        "value": "⦰ 886 * \tW772 H150mm"
+      }
+    ],
+    "type": "Pendant Lighting",
+    "class": null,
+    "title": "GB314 THE GAB ICS",
+    "description": [
+      {
+        "markDefs": [],
+        "children": [
+          {
+            "marks": [],
+            "text": "Suspension Aluminium Wave Pendant lights LED for Kitchen,living room, Bar, Office Lights.",
+            "_key": "e48874290c290",
+            "_type": "span"
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "eb58ac32283f"
+      },
+      {
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "\n",
+            "_key": "5db5c204a7310"
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "519999bf401d"
+      }
+    ],
+    "price": "85,000",
+    "total_quantity": 0,
+    "room": "Living Room"
+  },
+  {
+    "title": "GB313 THE IGBM PIECE",
+    "price": "90,000",
+    "features": [
+      {
+        "name": "Colour",
+        "value": "Stainless steel plating plus crystals"
+      },
+      {
+        "name": "Size",
+        "value": "D500 * D300"
+      }
+    ],
+    "total_quantity": 1,
+    "class": null,
+    "slug": {
+      "current": "gb313-the-igbm-piece",
+      "_type": "slug"
+    },
+    "images": [
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/849bb9cea651807e204831934fd877f40a06c9b6-1200x1600.jpg"
+        }
+      }
+    ],
+    "description": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "_key": "f5ffbe8eb9ea",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "Adorn your space with a charming crystal mini pendant light featuring delicate, faceted crystals that gently catch and reflect the light.",
+            "_key": "9cefbfa452ad0"
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "style": "normal",
+        "_key": "4bbf38ce1a6a",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "The petite design adds a touch of elegance making it perfect for smaller spaces or as an accent piece.",
+            "_key": "7d37b9c443ac0"
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "style": "normal",
+        "_key": "e1fde0adf2c3",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "2ae0faa44c080",
+            "_type": "span",
+            "marks": [],
+            "text": "\n"
+          }
+        ]
+      }
+    ],
+    "type": "Chandelier",
+    "room": "Bedroom"
+  },
+  {
+    "title": "GB321 THE TCHB PIECE",
+    "description": [
+      {
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "Illuminate your space with this cheek and modern table lamp resembling a graceful ball.",
+            "_key": "1911c3f123b90"
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "e08981196925",
+        "markDefs": []
+      },
+      {
+        "style": "normal",
+        "_key": "423786c1d53d",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "The spherical shape adds a playful touch while maintaining a clean aesthetic.",
+            "_key": "47ab3f49ad7d0"
+          }
+        ],
+        "_type": "block"
+      },
+      {
+        "style": "normal",
+        "_key": "96ee5a7da94a",
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "c3dbff9476a60",
+            "_type": "span",
+            "marks": [],
+            "text": "This versatile and charming table lamp is perfect for contemporary interior providing both style and functionality\n"
+          }
+        ],
+        "_type": "block"
+      }
+    ],
+    "features": [
+      {
+        "name": "Size",
+        "value": "300 * 200 * 400"
+      }
+    ],
+    "room": "Bedroom",
+    "class": null,
+    "slug": {
+      "current": "gb321-the-tchb-piece",
+      "_type": "slug"
+    },
+    "images": [
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/9772c7f597cd2815e2a17630a11a8cb8f34ad904-1200x1600.jpg"
+        }
+      }
+    ],
+    "price": "30,000",
+    "total_quantity": 1,
+    "type": "Lamp"
+  },
+  {
+    "slug": {
+      "current": "gb310-the-fdot-light",
+      "_type": "slug"
+    },
+    "features": [
+      {
+        "name": "Size",
+        "value": "⦰600mm"
+      }
+    ],
+    "room": "Living Room",
+    "title": "GB310 THE FDOT LIGHT",
+    "images": [
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/ad056529c69bdc5f15fa8c7b5aa7933ec8f529e3-1200x1600.jpg"
+        }
+      }
+    ],
+    "description": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "_key": "15ef50e5c372",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "Crafted with precision and artistry, each pendant features multiple delicate jellyfish suspended from a central fixture, creating a mesmerising visual display. The translucent bodies of the jellyfish gently diffuse light, casting a soft, ethereal glow that transforms any room into a tranquil oasis.",
+            "_key": "115e252ceb0d0"
+          }
+        ]
+      }
+    ],
+    "price": "90,000",
+    "total_quantity": 1,
+    "type": "Chandelier",
+    "class": null
+  },
+  {
+    "total_quantity": 1,
+    "room": "Dining Room",
+    "class": null,
+    "title": "GB416 CGHM!",
+    "description": [
+      {
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "Explore the intersection of creativity and geometry with these pendant lights,perfect for illuminating restaurants bars, terraces,balconies, aisles and network cafes. Featuring a personality-rich design, these lights boast E27 compatibility.",
+            "_key": "5d8edf2f98d00"
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "8055f818d023"
+      },
+      {
+        "style": "normal",
+        "_key": "4d7bfc92dc4c",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "\n",
+            "_key": "51f9f463dca00"
+          }
+        ],
+        "_type": "block"
+      }
+    ],
+    "price": "85,000",
+    "features": [
+      {
+        "name": "Material",
+        "value": "Iron"
+      }
+    ],
+    "slug": {
+      "current": "gb416-cghm",
+      "_type": "slug"
+    },
+    "images": [
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/11a85f3fd419f57002f927f153bb6e2d06dac2ba-1170x1189.jpg"
+        }
+      },
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/77fc4a3499950635efa3b9964dc41fbc8d3eca92-1200x1600.jpg"
+        }
+      }
+    ],
+    "type": "Pendant Lighting"
+  },
+  {
+    "price": "85,000",
+    "features": null,
+    "total_quantity": 1,
+    "class": null,
+    "slug": {
+      "current": "gb411-the-pwe-pendant",
+      "_type": "slug"
+    },
+    "title": "GB411 THE PWE PENDANT",
+    "description": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "_key": "594120197bf3",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "Elevate your space with this simple LED pendant lamp with a glass jar design that exudes simplicity and modern aesthetics. The pendant light features a clear glass jar shade that allows the LED light source to shine through,resulting in a soft and ambient illumination.",
+            "_key": "c4900ad267a30"
+          }
+        ]
+      },
+      {
+        "style": "normal",
+        "_key": "2aedc2bde284",
+        "markDefs": [],
+        "children": [
+          {
+            "text": "\n",
+            "_key": "b5474d779a8f0",
+            "_type": "span",
+            "marks": []
+          }
+        ],
+        "_type": "block"
+      }
+    ],
+    "images": [
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/a73c30f06dd72bb95163c8e20d331a005c47828f-1200x1600.jpg"
+        }
+      }
+    ],
+    "type": "Pendant Lighting",
+    "room": "Bedroom"
+  },
+  {
+    "room": "Living Room",
+    "images": [
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/168879c7694a9041e5baeb1f399fb94450fabd8f-1200x1600.jpg"
+        }
+      }
+    ],
+    "description": [
+      {
+        "style": "normal",
+        "_key": "76622b5f53a0",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "Infuse a soft and charming ambience into your space with a pink fabric pendant light, perfect for adding a touch of warmth and style.",
+            "_key": "21eaf4ac273a0"
+          }
+        ],
+        "_type": "block"
+      }
+    ],
+    "price": "55,000",
+    "total_quantity": 1,
+    "type": "Pendant Ligthing",
+    "slug": {
+      "current": "gb360-the-slush-piece",
+      "_type": "slug"
+    },
+    "title": "GB360 THE SLUSH PIECE",
+    "features": [
+      {
+        "name": "Primary Material",
+        "value": "Cloth cover plus black metal"
+      },
+      {
+        "name": "Size",
+        "value": "D450 * H200mm"
+      }
+    ],
+    "class": null
+  },
+  {
+    "total_quantity": 4,
+    "room": "Living Room",
+    "class": null,
+    "slug": {
+      "current": "gb402-the-sog-black",
+      "_type": "slug"
+    },
+    "title": "GB402 THE SOG! BLACK",
+    "features": null,
+    "type": "Pendnant Lighting",
+    "images": [
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/c3d34945a15f68f80a5334234229cdabaf25e7c2-1200x1600.jpg"
+        }
+      }
+    ],
+    "description": [
+      {
+        "style": "normal",
+        "_key": "76983153703e",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "Revitalise your space with a distinctive bicycle- inspired pendant light, a unique blend of industrial and electric design.",
+            "_key": "4c403ccf2ff20"
+          }
+        ],
+        "_type": "block"
+      },
+      {
+        "_key": "10a0b7e14560",
+        "markDefs": [],
+        "children": [
+          {
+            "text": "Proudly,this has become a best seller for the longest.",
+            "_key": "540827e92f2a0",
+            "_type": "span",
+            "marks": []
+          }
+        ],
+        "_type": "block",
+        "style": "normal"
+      },
+      {
+        "_type": "block",
+        "style": "normal",
+        "_key": "7e001da9d04d",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "\n",
+            "_key": "d92f645ffa1c0"
+          }
+        ]
+      }
+    ],
+    "price": "36,000"
+  },
+  {
+    "features": [
+      {
+        "name": "Primary Material",
+        "value": "Fabric"
+      },
+      {
+        "name": "Material Finish",
+        "value": "Chrome Plated"
+      },
+      {
+        "name": "Colour",
+        "value": "White lamp shade chrome"
+      },
+      {
+        "name": "Size",
+        "value": "32 * 32* 56cm"
+      }
+    ],
+    "type": "Lamp",
+    "room": "Bedroom",
+    "slug": {
+      "current": "gb361-the-vam-table-lamp",
+      "_type": "slug"
+    },
+    "title": "GB361 THE VAM TABLE LAMP",
+    "images": [
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/4dea2e193ad9c9e1fae6e5edf31aa2b0e9ec6acc-1200x1600.jpg"
+        }
+      }
+    ],
+    "description": [
+      {
+        "markDefs": [],
+        "children": [
+          {
+            "marks": [],
+            "text": "This handcrafted table lamp with cutout detailing on the lamp shade adds a look of class to your space.",
+            "_key": "f6536fe0f2730",
+            "_type": "span"
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "e47ddcdfc0b8"
+      }
+    ],
+    "price": "50,000",
+    "class": null,
+    "total_quantity": 0
+  },
+  {
+    "slug": {
+      "current": "gb407-the-billionaire-realtor",
+      "_type": "slug"
+    },
+    "description": [
+      {
+        "style": "normal",
+        "_key": "411e99b91836",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "This modern minimalist style and distinctive 4-wave design not only give lights but also enhance the decorative experience. It is constructed with iron art ceiling box, high-quality lightweight aluminium, and an acrylic lampshade. Also with LED permanently fixed.",
+            "_key": "192120796c710"
+          }
+        ],
+        "_type": "block"
+      }
+    ],
+    "features": [
+      {
+        "name": "Dimensions",
+        "value": "length 80cm (31.5inches) height 6cm (2.36inches) hanging wire length 120cm (47.24inches)"
+      },
+      {
+        "name": "Material",
+        "value": "acrylic + Aluminium + iron"
+      }
+    ],
+    "total_quantity": 1,
+    "title": "GB407 THE  BILLIONAIRE REALTOR",
+    "images": [
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/be354f883015a4863553499f15ae76272dc79343-1200x1600.jpg"
+        }
+      }
+    ],
+    "price": "83,000",
+    "type": "Ceiling Light",
+    "room": "Dining Room",
+    "class": null
+  },
+  {
+    "title": "GB342",
+    "images": null,
+    "price": "25,000",
+    "features": [
+      {
+        "name": "Colour",
+        "value": "Grey"
+      }
+    ],
+    "total_quantity": 1,
+    "type": "Pendant Lighting",
+    "room": null,
+    "class": null,
+    "slug": {
+      "current": "gb342",
+      "_type": "slug"
+    },
+    "description": [
+      {
+        "style": "normal",
+        "_key": "18b1c606431b",
+        "markDefs": [],
+        "children": [
+          {
+            "text": "Elevate your interior with this stylish cone shaped midi pendant light, blending,modern design and functionality. Crafted with precision, the sleek cone silhouette adds a touch of sophistication to the space.",
+            "_key": "ed76ef68c88a0",
+            "_type": "span",
+            "marks": []
+          }
+        ],
+        "_type": "block"
+      }
+    ]
+  },
+  {
+    "slug": {
+      "current": "gb346-the-smith-pendant",
+      "_type": "slug"
+    },
+    "title": "GB346 THE SMITH PENDANT ",
+    "total_quantity": 2,
+    "room": "Dining Room",
+    "images": [
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/20f1e02be3149b0bdbc07a4df0ec30f7ba14ef43-1200x1600.jpg"
+        }
+      }
+    ],
+    "description": [
+      {
+        "_key": "bc14aa78b1d1",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "This light screams class in a subtle way. ( new name) is an Archy ceiling lamp with iron and aluminium used.",
+            "_key": "c0e3dbbf00a60"
+          }
+        ],
+        "_type": "block",
+        "style": "normal"
+      },
+      {
+        "markDefs": [],
+        "children": [
+          {
+            "_key": "f295888195290",
+            "_type": "span",
+            "marks": [],
+            "text": "Super perfect for the living room, dining room and a study room."
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "6241e8dd4279"
+      },
+      {
+        "markDefs": [],
+        "children": [
+          {
+            "text": "High temperature baking paint, resistant to oxidation,corrosion and not fading.",
+            "_key": "542c39122bf60",
+            "_type": "span",
+            "marks": []
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "b75daf0019cd"
+      }
+    ],
+    "price": "90,000",
+    "features": [
+      {
+        "name": "size",
+        "value": "outer ring 867mm  inner ring 630mm H 100mm"
+      },
+      {
+        "name": "Material",
+        "value": "iron + aluminium"
+      }
+    ],
+    "type": "Pendant Lighting",
+    "class": null
+  },
+  {
+    "title": "Gb344*2 THE RVM TWO-LAYERED PENDANT 2",
+    "images": [
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/926b2d855a258fd1238940e15062671339a09eae-1200x1600.jpg"
+        }
+      }
+    ],
+    "features": [
+      {
+        "name": "size",
+        "value": "⦲80xH150 (80+60)"
+      },
+      {
+        "name": "material",
+        "value": "Polycarbonate"
+      },
+      {
+        "name": "Installation Type",
+        "value": "Flush mount"
+      },
+      {
+        "name": "Material and Process",
+        "value": "Iron/glass shade"
+      },
+      {
+        "name": "Product wattage",
+        "value": "LED185W"
+      }
+    ],
+    "type": "Chandelier",
+    "slug": {
+      "current": "gb344-2-the-rvm-two-layered-pendant-2",
+      "_type": "slug"
+    },
+    "description": [
+      {
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "This minimalist two-layered LED pendant lamp is a sleek and contemporary lighting fixture designed with simplicity and functionality in mind.",
+            "_key": "d11f612d6dcd0"
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "e34992c75869"
+      },
+      {
+        "_key": "ebfd6b0d7e3f",
+        "markDefs": [],
+        "children": [
+          {
+            "text": "Within the outer frame, the inner layer holds the LED light source. The inner layer is designed to be unobtrusive, with a subtle profile that doesn't detract from the lamp's overall simplicity. The LED light source is energy-efficient, providing a soft and warm illumination that enhances the ambient lighting in any space..",
+            "_key": "6e23aad5ae4e0",
+            "_type": "span",
+            "marks": []
+          }
+        ],
+        "_type": "block",
+        "style": "normal"
+      },
+      {
+        "children": [
+          {
+            "marks": [],
+            "text": "The pendant lamp is typically suspended from a thin and discreet cable, adding to the illusion of weightlessness and contributing to the overall minimalist effect.",
+            "_key": "2da17a49347b0",
+            "_type": "span"
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "6c6ed3d3f791",
+        "markDefs": []
+      },
+      {
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "\n",
+            "_key": "c283b48971b20"
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "a27ff72c256a"
+      }
+    ],
+    "price": null,
+    "total_quantity": 1,
+    "room": "Bedroom",
+    "class": null
+  },
+  {
+    "price": "90,000",
+    "type": "Lamp",
+    "images": [
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/fe82ba151476f26a40d396937ae169ce18e9057c-1200x1600.jpg"
+        }
+      }
+    ],
+    "description": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "_key": "5054b0e1f7fd",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "Introduce modern sophistication to your space with this arc-shaped black floor lamp featuring a sleek design and a modest shade. The lamp gracefully extends in an arc, providing versatile illumination that complements contemporary interiors. The black finish adds a touch of elegance, while the understated shade completes the look with subtle refinement.",
+            "_key": "d771135f32d00"
+          }
+        ]
+      },
+      {
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "\n",
+            "_key": "89768195526d0"
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "6b6085ecd969"
+      }
+    ],
+    "features": [
+      {
+        "name": "Dimensions",
+        "value": null
+      }
+    ],
+    "total_quantity": 1,
+    "room": "Living Room",
+    "class": null,
+    "slug": {
+      "current": "gb408-the-ysa-floor-lamp",
+      "_type": "slug"
+    },
+    "title": "GB408  THE YSA FLOOR LAMP"
+  },
+  {
+    "slug": {
+      "current": "gb308-the-icsh-piece",
+      "_type": "slug"
+    },
+    "images": [
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/372a887f61d77734497e80781d04e7e259c004c6-1200x1600.jpg"
+        }
+      }
+    ],
+    "description": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "_key": "3f1ab84d6c07",
+        "markDefs": [],
+        "children": [
+          {
+            "text": "Enhance your hallway with a traditional great chandelier that exudes timeless beauty. This luxurious fixture features detailed baroque craftsmanship that refracts light in a stunning display.",
+            "_key": "05c15dad2b5b0",
+            "_type": "span",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "children": [
+          {
+            "text": "This chandelier which is ideal for grand entrances, dining and ball rooms represents sophistication and long lasting style.",
+            "_key": "013c4a092cc70",
+            "_type": "span",
+            "marks": []
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "053117fabf39",
+        "markDefs": []
+      },
+      {
+        "style": "normal",
+        "_key": "b0e2c660d3f6",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "\n",
+            "_key": "cff5b951c3920"
+          }
+        ],
+        "_type": "block"
+      }
+    ],
+    "total_quantity": 1,
+    "title": "GB308 THE ICSH PIECE",
+    "price": "260,000",
+    "features": [
+      {
+        "name": "Size",
+        "value": "⦰ 1100 * H480mm"
+      }
+    ],
+    "type": "Chandelier",
+    "room": "Living Room",
+    "class": null
+  },
+  {
+    "title": "GB320 THE VAM FLOOR LAMP",
+    "images": [
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/5535dfaef3b01cfdae0a89fc40d6b161e110e345-1200x1600.jpg"
+        }
+      }
+    ],
+    "description": [
+      {
+        "markDefs": [],
+        "children": [
+          {
+            "marks": [],
+            "text": "This handcrafted floor lamp with cutout detailing on the lamp shade adds a look of class to your space.",
+            "_key": "9da14c0d1a910",
+            "_type": "span"
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "671126ab36e3"
+      }
+    ],
+    "features": [
+      {
+        "name": "Primary Material",
+        "value": "Fabric"
+      },
+      {
+        "name": "Material Finish",
+        "value": "Chrome Plated"
+      },
+      {
+        "name": "Colour",
+        "value": "White lamp shade chrome"
+      },
+      {
+        "name": "Size",
+        "value": "45 * 45 * 157cm"
+      }
+    ],
+    "class": null,
+    "slug": {
+      "current": "gb320-the-vam-floor-lamp",
+      "_type": "slug"
+    },
+    "price": "85,000",
+    "total_quantity": 3,
+    "type": "Lamp",
+    "room": "Bedroom"
+  },
+  {
+    "images": [
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/00600dd70d615e5b505fdac4621173b3521bb07f-1200x1600.jpg"
+        }
+      }
+    ],
+    "features": [
+      {
+        "name": "Design Style",
+        "value": "Minimalist"
+      },
+      {
+        "name": "Light Source",
+        "value": "LED"
+      },
+      {
+        "name": "Body Material",
+        "value": "Stainless steel/Silicon"
+      },
+      {
+        "name": "Body Colour",
+        "value": "Bronze"
+      },
+      {
+        "name": "Size",
+        "value": "L1500 * W800 * H1500mm"
+      }
+    ],
+    "total_quantity": 2,
+    "type": "Pendant Lighting",
+    "class": null,
+    "slug": {
+      "current": "gb357-the-cijm-6ring-pendant",
+      "_type": "slug"
+    },
+    "title": "GB357 THE CIJM 6RING PENDANT ",
+    "description": [
+      {
+        "style": "normal",
+        "_key": "73e3bc1e2240",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "Decorative six rings LED pendant light, this brings about a modern contemporary touch to your living space. It is perfect to fit any room and living space plus it is certified for safety and can be controlled with a switch.",
+            "_key": "8da78a906d990"
+          }
+        ],
+        "_type": "block"
+      }
+    ],
+    "price": "180,000",
+    "room": "Living Room"
+  },
+  {
+    "description": [
+      {
+        "markDefs": [],
+        "children": [
+          {
+            "marks": [],
+            "text": "It is a huge light with highly unique shapes that you will adore.",
+            "_key": "28dda2693bfc0",
+            "_type": "span"
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "973d32a664e6"
+      },
+      {
+        "children": [
+          {
+            "marks": [],
+            "text": "Once attached, you will never be bored of seeing it with LED technology, brushed aluminium with bronze finish.",
+            "_key": "17597f2ec12a0",
+            "_type": "span"
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "d19776027564",
+        "markDefs": []
+      },
+      {
+        "_key": "fbcdf83dd911",
+        "markDefs": [],
+        "children": [
+          {
+            "marks": [],
+            "text": "\n",
+            "_key": "186314d5e4d60",
+            "_type": "span"
+          }
+        ],
+        "_type": "block",
+        "style": "normal"
+      }
+    ],
+    "price": "100,000",
+    "features": [
+      {
+        "name": "Size",
+        "value": "⦰ 60 * H150{60}"
+      }
+    ],
+    "room": "Living Room",
+    "type": "Pendant Lighting",
+    "class": null,
+    "slug": {
+      "current": "gb355-the-rvm-piece-1",
+      "_type": "slug"
+    },
+    "title": "GB355 THE RVM PIECE 1 ",
+    "images": [
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/eb36edf1c928ffc93ff239b47baf7d803e9ebcc8-1200x1600.jpg"
+        }
+      }
+    ],
+    "total_quantity": 0
+  },
+  {
+    "slug": {
+      "current": "gb412-8b-rghm",
+      "_type": "slug"
+    },
+    "title": "GB412*8B RGHM!",
+    "images": [
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/6abb001b7b71a84aa45c640c2a502d2755882ed3-1200x1600.jpg"
+        }
+      }
+    ],
+    "price": "90,000",
+    "total_quantity": 1,
+    "description": [
+      {
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "Illuminate your space with this retro attic LED light adorned with 8 Golden LED bulbs for a touch of vintage charm and modern efficiency.",
+            "_key": "bf6ddb2504690"
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "cd2194a60220"
+      },
+      {
+        "children": [
+          {
+            "marks": [],
+            "text": "Our goal is to provide our customers with efficient, convenient,and highly quality lights.",
+            "_key": "8b7e334f3eb90",
+            "_type": "span"
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "e996ce532b64",
+        "markDefs": []
+      },
+      {
+        "children": [
+          {
+            "text": "\n",
+            "_key": "6aca23d14fab0",
+            "_type": "span",
+            "marks": []
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "aa0288b93885",
+        "markDefs": []
+      }
+    ],
+    "features": [
+      {
+        "name": "Material",
+        "value": "Brass and Glass"
+      }
+    ],
+    "type": "Ceiling Light",
+    "room": "Living Room",
+    "class": null
+  },
+  {
+    "room": "Foyer",
+    "slug": {
+      "current": "gb412-the-cjm-effect-12-bulbs",
+      "_type": "slug"
+    },
+    "title": "GB412 THE CJM EFFECT 12 BULBS ",
+    "images": [
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/5e53a1383b43402cae0ff2d7b5898a9e307ade96-1200x1600.jpg"
+        }
+      }
+    ],
+    "features": [
+      {
+        "name": "Material",
+        "value": "Brass, Glass"
+      },
+      {
+        "name": "Light source",
+        "value": "LED lamp beads"
+      }
+    ],
+    "total_quantity": 1,
+    "type": "Chandelier",
+    "description": [
+      {
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "Elevate your decor with this 12 light mid-century contemporary chandelier with Gypsophila glass shades that creates a stunning DNA magic bean motif.",
+            "_key": "a5edfff5811c0"
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "d20e0a212e8a",
+        "markDefs": []
+      },
+      {
+        "markDefs": [],
+        "children": [
+          {
+            "marks": [],
+            "text": "This brass hanging light fixture adds sophistication to living rooms, foyers, bedrooms, and dining areas.",
+            "_key": "e13d9ca955950",
+            "_type": "span"
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "1c6822d94372"
+      },
+      {
+        "_key": "a761ca155fd9",
+        "markDefs": [],
+        "children": [
+          {
+            "text": "Also super easy to install.",
+            "_key": "7e5b1346f2790",
+            "_type": "span",
+            "marks": []
+          }
+        ],
+        "_type": "block",
+        "style": "normal"
+      }
+    ],
+    "price": "165,000",
+    "class": null
+  },
+  {
+    "price": "55,000",
+    "features": [
+      {
+        "name": "Size",
+        "value": "⦰ 500 * H100"
+      }
+    ],
+    "room": "Foyer",
+    "class": null,
+    "images": [
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/8424344dbfaf429406022a741e613fd5e05a7c65-1200x1600.jpg"
+        }
+      }
+    ],
+    "description": [
+      {
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "A uniquely crafted rattans that makes its designs features a sight to behold.",
+            "_key": "08b18b466c550"
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "c832651312d8"
+      },
+      {
+        "_type": "block",
+        "style": "normal",
+        "_key": "1c8bf217f10a",
+        "markDefs": [],
+        "children": [
+          {
+            "marks": [],
+            "text": "This oriental aesthetic lamp is fastened to the ceiling and carries a round metallic vase polished in silver ironmongery.",
+            "_key": "c9dcfcf293c00",
+            "_type": "span"
+          }
+        ]
+      }
+    ],
+    "total_quantity": 8,
+    "type": "Ceiling Light",
+    "slug": {
+      "_type": "slug",
+      "current": "gb329-the-rattan-ball"
+    },
+    "title": "GB329 THE RATTAN BALL"
+  },
+  {
+    "type": "Chandelier",
+    "title": "GB351 THE HR PIECE",
+    "images": [
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/b47a3fcb93e7d2ba7b6c2f2530b1904d125e4901-1200x1600.jpg"
+        }
+      }
+    ],
+    "description": [
+      {
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "This rose gold pendant light typically features a captivating combination of elegance and modern design. The pendant itself is suspended from the ceiling and serves as both a functional lighting fixture and a stylish decorative element. This piece is not only beautiful but are also very functional with powered integrated LED",
+            "_key": "9fd2f80ce6c90"
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "2969e73d1855",
+        "markDefs": []
+      }
+    ],
+    "price": "90,000",
+    "features": [
+      {
+        "name": "Material",
+        "value": "Stainless Steel"
+      },
+      {
+        "name": "Finish",
+        "value": "Rose Gold"
+      },
+      {
+        "name": "Size",
+        "value": "⦵600mm"
+      }
+    ],
+    "total_quantity": 1,
+    "room": "Bedroom",
+    "class": null,
+    "slug": {
+      "current": "gb351-the-hr-piece",
+      "_type": "slug"
     }
-  ]
-  
+  },
+  {
+    "price": "25,000",
+    "type": "Pendant Lighting",
+    "room": "Living Room",
+    "class": null,
+    "title": "GB358 THE LITTLE EFFECT PIECE",
+    "description": [
+      {
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "Introduce a touch of the extraordinary with a bat shaped midi pendant light, a unique and eye catching addition to your decor.",
+            "_key": "9e377232c93d0"
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "157e2fde59b1"
+      },
+      {
+        "style": "normal",
+        "_key": "43c79166f9d6",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "\n",
+            "_key": "4a798883fceb0"
+          }
+        ],
+        "_type": "block"
+      }
+    ],
+    "features": null,
+    "total_quantity": 1,
+    "slug": {
+      "current": "gb358-the-little-effect-piece",
+      "_type": "slug"
+    },
+    "images": [
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/5d76a9d13afbb66cb986b93235cfba1b4319ce84-1200x1600.jpg"
+        }
+      }
+    ]
+  },
+  {
+    "price": "80,000",
+    "total_quantity": 1,
+    "type": "Ceiling Light",
+    "room": "Bedroom",
+    "class": null,
+    "slug": {
+      "current": "gb311-the-funnel",
+      "_type": "slug"
+    },
+    "title": "GB311 THE FUNNEL",
+    "images": [
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/af8cce52a33a2050a930a2f2e07b20895bb4c950-1200x1600.jpg"
+        }
+      }
+    ],
+    "description": [
+      {
+        "_key": "0ba0727776c3",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "Brighten up your space with this Contemporary 3in1 style LED. Inside the lampshade, the gold-colored design provides unique accents and gives the lamp a touch of luxury.",
+            "_key": "80b32f7608840"
+          }
+        ],
+        "_type": "block",
+        "style": "normal"
+      },
+      {
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "Compared to normal lamps, the use of the LED spotlights only consume a minimum amount of electricity and consumption is even lower than energy saving lamps.",
+            "_key": "ae696efc4ff10"
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "dad6c09a004e"
+      },
+      {
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "\n",
+            "_key": "9bd6872556fc0"
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "a5cface94147"
+      }
+    ],
+    "features": [
+      {
+        "name": "Size",
+        "value": " overall Height:1.8m D-150mm H-60mm"
+      },
+      {
+        "name": "Ceiling cup",
+        "value": "D350mm"
+      },
+      {
+        "name": "Exposed wire",
+        "value": "1.8m"
+      }
+    ]
+  },
+  {
+    "type": "Lamp",
+    "room": "Bedroom",
+    "slug": {
+      "current": "gb335-the-ccm-piece",
+      "_type": "slug"
+    },
+    "title": "GB335 THE CCM PIECE",
+    "price": "40,000",
+    "features": [
+      {
+        "name": "Size",
+        "value": " ⦰ 240 * H340mm"
+      }
+    ],
+    "images": [
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/54dbab321c7980061654f580f41e7d57ece9faf4-1200x1600.jpg"
+        }
+      }
+    ],
+    "description": [
+      {
+        "style": "normal",
+        "_key": "2a8b016d46dc",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "Introducing a sleek black lucid table lamp for a touch of modern sophistication.",
+            "_key": "503f0b0618470"
+          }
+        ],
+        "_type": "block"
+      },
+      {
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "The lamp features a glossy, black finish with a lucid transparent base, adding a contemporary flair to the space.",
+            "_key": "78f464f25c630"
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "5d4622d9b4a5"
+      },
+      {
+        "style": "normal",
+        "_key": "e7566b2c5b5c",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "\n",
+            "_key": "46506c49b6f90"
+          }
+        ],
+        "_type": "block"
+      }
+    ],
+    "total_quantity": 2,
+    "class": null
+  },
+  {
+    "description": [
+      {
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "Introducing a sleek and contemporary three wing mini pendant light that combines style and sophistication. This pendant light features three concentric black wings suspended in a captivating arrangement, creating a modern and minimalistic aesthetic.",
+            "_key": "bc2081fbe54b0"
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "7a6b67f8b808"
+      },
+      {
+        "_key": "5f42a77a23eb",
+        "markDefs": [],
+        "children": [
+          {
+            "text": "This mini size makes it perfect for smaller spaces as part of a cluster arrangement.",
+            "_key": "fd71131a6a130",
+            "_type": "span",
+            "marks": []
+          }
+        ],
+        "_type": "block",
+        "style": "normal"
+      },
+      {
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "\n",
+            "_key": "8a6f95bd95500"
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "39b75f249357"
+      }
+    ],
+    "price": "60,000",
+    "total_quantity": 3,
+    "slug": {
+      "current": "gb403-the-ojm-light",
+      "_type": "slug"
+    },
+    "title": "GB403 THE OJM LIGHT",
+    "type": "Pendant Lighting",
+    "room": "Living Room",
+    "class": null,
+    "images": [
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/129d6c4835a872f2802980936054119233e1a381-1200x1600.jpg"
+        }
+      }
+    ],
+    "features": null
+  },
+  {
+    "slug": {
+      "current": "gb402-the-sog-gold",
+      "_type": "slug"
+    },
+    "title": "GB402 THE SOG! GOLD",
+    "description": [
+      {
+        "_type": "block",
+        "style": "normal",
+        "_key": "76983153703e",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "Revitalise your space with a distinctive bicycle- inspired pendant light, a unique blend of industrial and electric design.",
+            "_key": "4c403ccf2ff20"
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "style": "normal",
+        "_key": "10a0b7e14560",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "Proudly,this has become a best seller for the longest.",
+            "_key": "540827e92f2a0"
+          }
+        ]
+      },
+      {
+        "children": [
+          {
+            "marks": [],
+            "text": "\n",
+            "_key": "d92f645ffa1c0",
+            "_type": "span"
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "7e001da9d04d",
+        "markDefs": []
+      }
+    ],
+    "price": "39,000",
+    "type": "Pendnant Lighting",
+    "images": [
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/e8399b682c76fc49da6123fce0f41bda6fc94db9-1200x1600.jpg"
+        }
+      }
+    ],
+    "features": null,
+    "total_quantity": 2,
+    "room": "Living Room",
+    "class": null
+  },
+  {
+    "slug": {
+      "current": "gb402-the-sog-white",
+      "_type": "slug"
+    },
+    "title": "GB402 THE SOG! WHITE",
+    "description": [
+      {
+        "_key": "76983153703e",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "Revitalise your space with a distinctive bicycle- inspired pendant light, a unique blend of industrial and electric design.",
+            "_key": "4c403ccf2ff20"
+          }
+        ],
+        "_type": "block",
+        "style": "normal"
+      },
+      {
+        "children": [
+          {
+            "marks": [],
+            "text": "Proudly,this has become a best seller for the longest.",
+            "_key": "540827e92f2a0",
+            "_type": "span"
+          }
+        ],
+        "_type": "block",
+        "style": "normal",
+        "_key": "10a0b7e14560",
+        "markDefs": []
+      },
+      {
+        "style": "normal",
+        "_key": "7e001da9d04d",
+        "markDefs": [],
+        "children": [
+          {
+            "text": "\n",
+            "_key": "d92f645ffa1c0",
+            "_type": "span",
+            "marks": []
+          }
+        ],
+        "_type": "block"
+      }
+    ],
+    "total_quantity": 1,
+    "type": "Pendnant Lighting",
+    "class": null,
+    "images": [
+      {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/qb388cmd/production/f81e5bb4ab09f0f1da055075e694ddf16daff595-1200x1600.jpg"
+        }
+      }
+    ],
+    "price": "39,000",
+    "features": null,
+    "room": "Living Room"
+  }
+]
