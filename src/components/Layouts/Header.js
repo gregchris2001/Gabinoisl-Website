@@ -2,12 +2,11 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Nav, Navbar, Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import SearchModal from './Home/SearchModal'
+import SearchModal from "./Home/SearchModal";
 
 import Gabinoisl from "../../images/gabinoisl-logo.png";
 
 const Header = () => {
-
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -16,14 +15,14 @@ const Header = () => {
   const searchHandler = (e) => {
     e.preventDefault();
     handleShow();
-  }
+  };
 
   return (
     <header>
       <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
         <Container style={{ maxWidth: "100%", backgroundColor: "black" }}>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Brand href="#home" style={{ width: "12rem" }}>
+          <Navbar.Brand href="/" style={{ width: "12rem" }}>
             <img
               src={Gabinoisl}
               className="d-inline-block align-top"
@@ -37,11 +36,11 @@ const Header = () => {
               style={{ width: "100%", justifyContent: "space-evenly" }}
             >
               <NavLink
-                to="/shop/chandeliers"
+                to="/shop/chandelier"
                 exact
                 className="nav-link"
                 style={{ color: "white" }}
-                state={{ value: 'type' }}
+                state={{ value: "type" }}
               >
                 Chandeliers
               </NavLink>
@@ -51,7 +50,7 @@ const Header = () => {
                 exact
                 className="nav-link"
                 style={{ color: "white" }}
-                state={{ value: 'type' }}
+                state={{ value: "type" }}
               >
                 Pendant Lights
               </NavLink>
@@ -61,7 +60,7 @@ const Header = () => {
                 exact
                 className="nav-link"
                 style={{ color: "white" }}
-                state={{ value: 'type' }}
+                state={{ value: "type" }}
               >
                 Dining Room Chandeliers
               </NavLink>
@@ -71,7 +70,7 @@ const Header = () => {
                 exact
                 className="nav-link"
                 style={{ color: "white" }}
-                state={{ value: 'type' }}
+                state={{ value: "type" }}
               >
                 Foyer Chandeliers
               </NavLink>
@@ -81,7 +80,7 @@ const Header = () => {
                 exact
                 className="nav-link"
                 style={{ color: "white" }}
-                state={{ value: 'type' }}
+                state={{ value: "type" }}
               >
                 Ceiling Fans
               </NavLink>
@@ -91,7 +90,7 @@ const Header = () => {
                 exact
                 className="nav-link"
                 style={{ color: "white" }}
-                state={{ value: 'type' }}
+                state={{ value: "type" }}
               >
                 Lamps
               </NavLink>
@@ -101,7 +100,7 @@ const Header = () => {
                 exact
                 className="nav-link"
                 style={{ color: "white" }}
-                state={{ value: 'room' }}
+                state={{ value: "room" }}
               >
                 Best Sellers
               </NavLink>
@@ -111,7 +110,7 @@ const Header = () => {
                 exact
                 className="nav-link"
                 style={{ color: "white" }}
-                state={{ value: 'room' }}
+                state={{ value: "room" }}
               >
                 New Arrival
               </NavLink>
@@ -137,11 +136,7 @@ const Header = () => {
           </Nav>
         </Container>
       </Navbar>
-      <SearchModal 
-        handleClose={handleClose}
-        show={show}
-      />
-
+      <SearchModal handleClose={handleClose} show={show} />
     </header>
   );
 };

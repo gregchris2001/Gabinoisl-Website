@@ -4,31 +4,33 @@ import ProductContext from "../../store/product-context";
 import ProductsWithPagination from "../Layouts/Home/ProductsWithPagination";
 
 const Shop = () => {
-    const [shopResults, setShopResults] = useState([]);
-    const location = useLocation();
-    const { value } = location.state
-    const { category } = useParams();
+  const [shopResults, setShopResults] = useState([]);
+  const location = useLocation();
+  const { value } = location.state;
+  const { category } = useParams();
 
-    const { productData } = useContext(ProductContext);
+  const { productData } = useContext(ProductContext);
 
-    useEffect(() => {
-        filterProducts();
-    }, [productData, category, value]);
+  useEffect(() => {
+    filterProducts();
+  }, [productData, category, value]);
 
-    const filterProducts = () => {
-        if (productData && category && value) {
-            const filteredProducts = productData.filter(product => product[value].toLowerCase() === category.toLowerCase());
-            setShopResults(filteredProducts);
-        }
-    };
-    
-    console.log(shopResults)
+  const filterProducts = () => {
+    if (productData && category && value) {
+      const filteredProducts = productData?.filter(
+        (product) => product[value].toLowerCase() === category.toLowerCase()
+      );
+      setShopResults(filteredProducts);
+    }
+  };
 
-    return (
-        <>
-            <ProductsWithPagination productData={shopResults} />
-        </>
-    )
-}
+  console.log(shopResults);
+
+  return (
+    <>
+      <ProductsWithPagination productData={shopResults} />
+    </>
+  );
+};
 
 export default Shop;

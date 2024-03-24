@@ -90,11 +90,9 @@ function App() {
           slug,
           title,
           images[]{
-            image{
               asset->{
                 url
               }
-            }
           },
           description,
           price,

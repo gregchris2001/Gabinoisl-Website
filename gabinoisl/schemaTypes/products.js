@@ -25,6 +25,7 @@ export default defineType({
       type: 'array',
       of: [
         {
+          name: 'image',
           type: 'image',
           options: {
             hotspot: true,
