@@ -103,7 +103,7 @@ const Product = () => {
                     {inCart ? "Added to Cart" : "Add to Cart"}
                   </Button>
                   <QuantityButtonGroup
-                    totalQuantity={10}
+                    totalQuantity={product.totalQuantity}
                     quantity={quantity}
                     onQuantityChange={handleQuantityChange}
                   />
