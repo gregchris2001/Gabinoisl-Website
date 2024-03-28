@@ -9,8 +9,14 @@ const ProductProvider = ({ children }) => {
   // Load recently viewed data from local storage on component mount
   useEffect(() => {
     const storedRecentlyViewed = localStorage.getItem('recentlyViewed');
+    const storedCartData = localStorage.getItem('cartData');
+
     if (storedRecentlyViewed) {
       setRecentlyViewed(JSON.parse(storedRecentlyViewed));
+    }
+
+    if (storedCartData) {
+      setCartData(JSON.parse(storedCartData));
     }
   }, []);
 
@@ -18,6 +24,10 @@ const ProductProvider = ({ children }) => {
   useEffect(() => {
     localStorage.setItem('recentlyViewed', JSON.stringify(recentlyViewed));
   }, [recentlyViewed]);
+
+  useEffect(() => {
+    localStorage.setItem('cartData', JSON.stringify(cartData));
+  }, [cartData]);
 
   const changeProductData = (state) => {
     setProductData(state);

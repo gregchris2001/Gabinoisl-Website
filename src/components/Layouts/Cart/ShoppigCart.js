@@ -39,18 +39,11 @@ const ShoppingCart = () => {
                     </Col>
                     <Col lg={4}>
                         <div>
-                            <h6>Discount codes</h6>
-                            <form>
-                                <input type="text" placeholder="Coupon code" />
-                                <Button type="submit">Apply</Button>
-                            </form>
-                        </div>
-                        <div>
                             <h6>Payment</h6>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aspernatur veniam rem!
                             </p>
-                            <a href="./redirect.html" className="primary-btn">Proceed to checkout</a>
+                            <a href="./redirect.html" className="primary-btn">Proceed to  </a>
                         </div>
                     </Col>
                 </Row>

@@ -30,6 +30,9 @@ const Product = () => {
 
   // Determine which product data to use
   const product = productFromState || productFromContext;
+  const descriptionText = product.description
+          .map((block) => block.children.map((child) => child.text).join(" "))
+          .join(" ");
 
   useEffect(() => {
     // Add the current product to recently viewed list
@@ -111,7 +114,7 @@ const Product = () => {
               </Row>
               <Row>
                 <Col>
-                  <DescriptionComponent description={product.description} />
+                  <DescriptionComponent description={descriptionText} />
                 </Col>
               </Row>
               <Row>
