@@ -31,8 +31,8 @@ const Product = () => {
   // Determine which product data to use
   const product = productFromState || productFromContext;
   const descriptionText = product.description
-          .map((block) => block.children.map((child) => child.text).join(" "))
-          .join(" ");
+    .map((block) => block.children.map((child) => child.text).join(" "))
+    .join(" ");
 
   useEffect(() => {
     // Add the current product to recently viewed list
@@ -57,8 +57,8 @@ const Product = () => {
 
   const handleAddToCart = () => {
     // Add product to cart with quantity
-    const product = { id: product.id, quantity: quantity };
-    addCartData(product);
+    const cartProduct = { id: product.id, quantity: quantity };
+    addCartData(cartProduct);
   };
 
   const handleQuantityChange = (newQuantity) => {

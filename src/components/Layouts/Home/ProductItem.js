@@ -1,15 +1,12 @@
 import { useContext, useState, useEffect } from "react";
-import { Card, Button } from "react-bootstrap";
+import { Card, Button, Row, Col } from "react-bootstrap";
+import QuantityButtonGroup from "../Product/QuantityButtonGroup";
 import { useNavigate } from "react-router-dom";
 import ProductContext from "../../../store/product-context";
 
 const ProductItem = ({ product }) => {
-  const {
-    cartData,
-    addCartData,
-    changeCartProductQuantity,
-    removeCartData
-  } = useContext(ProductContext);
+  const { cartData, addCartData, changeCartProductQuantity, removeCartData } =
+    useContext(ProductContext);
   const { title, images, price } = product;
   const [inCart, setInCart] = useState(false);
   const [quantity, setQuantity] = useState(1);
@@ -35,8 +32,8 @@ const ProductItem = ({ product }) => {
 
   const handleAddToCart = () => {
     // Add product to cart with quantity
-    const product = { id: product.id, quantity: quantity };
-    addCartData(product);
+    const cartProduct = { id: product.id, quantity: quantity };
+    addCartData(cartProduct);
   };
 
   const handleQuantityChange = (newQuantity) => {
