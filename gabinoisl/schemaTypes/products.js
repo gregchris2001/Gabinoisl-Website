@@ -46,7 +46,7 @@ export default defineType({
     defineField({
       name: 'price',
       title: 'Price',
-      type: 'string',
+      type: 'number',
     }),
     defineField({
       name: 'features',
