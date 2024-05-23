@@ -12,12 +12,23 @@ const ShippingDetailsCard = () => {
         <Card>
             <Card.Body>
                 <Card.Title>Shipping Details</Card.Title>
-                <Card.Text>
-                    <Badge variant="warning" className="mr-2">Fast Delivery</Badge>
+                <Card.Text 
+                    style={{
+                        display: "flex",
+                        gap: "1rem",
+                        alignItems: "center",
+                    }}
+                >
+                    <Badge bg="warning" style={{ padding: "0.5rem" }}>Fast Delivery</Badge>
                     Dispatch within 24 hours within Lagos
                 </Card.Text>
-                <Card.Text>
-                    <Badge variant="success" className="mr-2">Fast Shipping</Badge>
+                <Card.Text 
+                    style={{
+                        display: "flex",
+                        gap: "1rem",
+                    }}
+                >
+                    <Badge bg="success" style={{ padding: "0.5rem" }}>Fast Shipping</Badge>
                     Get it between {deliveryDateString}
                 </Card.Text>
             </Card.Body>

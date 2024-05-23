@@ -11,9 +11,9 @@ const CartTable = () => {
         <Table striped bordered hover>
             <thead>
                 <tr>
-                    <th style={{ color: '#e53637' }}>Product</th>
-                    <th style={{ color: '#e53637' }}>Quantity</th>
-                    <th style={{ color: '#e53637' }}>Total</th>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
                     <th></th>
                 </tr>
             </thead>

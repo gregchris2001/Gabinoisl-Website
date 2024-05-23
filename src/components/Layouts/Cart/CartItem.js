@@ -5,20 +5,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import QuantityButtonGroup from '../Product/QuantityButtonGroup';
 
 const CartItem = ({ product }) => {
-    const { id, images, title, price, quantity, totalQuantity } = product;
+    const { slug, images, title, price, quantity, total_quantity } = product;
     const { changeCartProductQuantity, removeCartData } = useContext(ProductContext);
 
-
     const handleQuantityChange = (newQuantity) => {
-        changeCartProductQuantity(id, newQuantity);
-
-        if (newQuantity === 0) {
-            removeCartData(id);
-        }
+        changeCartProductQuantity(slug, newQuantity);
     };
 
     const removeCartItemHandler = () => {
-        removeCartData(id);
+        removeCartData(slug);
     }
 
     return (
@@ -27,27 +22,28 @@ const CartItem = ({ product }) => {
                 <Row>
                     <Col>
                         <div>
-                            <Image src={images[0].asset.url} alt="" />
+                            <Image height={100} width={100} src={images[0].asset.url} alt="" />
                         </div>
                     </Col>
                     <Col>
                         <div>
-                            <h6 style={{ color: '#ffffff' }}>{title}</h6>
-                            <h5 style={{ color: '#e53637' }}>{price}</h5>
+                            <h6>{title}</h6>
+                            <h5 style={{ color: '#e53637' }}>₦ {price}</h5>
                         </div>
                     </Col>
                 </Row>
             </td>
             <td>
                 <QuantityButtonGroup
-                    totalQuantity={totalQuantity}
+                    totalQuantity={total_quantity}
                     quantity={quantity}
                     onQuantityChange={handleQuantityChange}
+                    removeCartDataHandler={removeCartItemHandler}
                 />
             </td>
-            <td>{totalQuantity * price}</td>
+            <td><h6>₦ {quantity * price}</h6></td>
             <td>
-                <Button onClick={removeCartItemHandler}>
+                <Button variant='danger' onClick={removeCartItemHandler}>
                     <FontAwesomeIcon icon="fa fa-close" />
                 </Button>
             </td>

@@ -1,18 +1,27 @@
 import { Card } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
-const ShopItem = ({ shop }) => {
+const ShopItem = ({ shop, value }) => {
   const { text, img } = shop;
+  const navigate = useNavigate();
 
+  const navigateShopHandler = () => {
+    navigate(`/shop/${text}`, {state : value});
+  };
+
+  console.log(shop);
+  
   return (
     <Card
       style={{
-        width: "18rem",
+        width: "10rem",
         flexDirection: "column",
         justifyContent: "flex-start",
         alignItems: "center",
         gap: "1.5rem",
         display: "flex",
       }}
+      onClick={navigateShopHandler}
     >
       <Card.Body
         style={{

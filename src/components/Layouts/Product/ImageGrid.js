@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 
 const ImageGrid = ({ images }) => {
-  const [selectedImage, setSelectedImage] = useState(images[0].asset.url);
+  const [selectedImage, setSelectedImage] = useState();
+
+  useEffect(() => {
+    setSelectedImage(images[0].asset.url)
+  }, [images])
 
   const handleImageSelect = (image) => {
     setSelectedImage(image.asset.url);
@@ -15,12 +19,11 @@ const ImageGrid = ({ images }) => {
         width: "100%",
         height: "100%",
         justifyContent: "center",
-        alignItems: "flex-end",
         gap: 10,
         display: "inline-flex",
       }}
     >
-      <Row className="align-items-start">
+      <Row style={{ flexWrap: "nowrap" }}>
         <Col
           xs={12}
           md={3}
@@ -28,17 +31,19 @@ const ImageGrid = ({ images }) => {
             flexDirection: "column",
             justifyContent: "flex-start",
             alignItems: "flex-start",
-            gap: 49,
+            gap: "2rem",
             display: "inline-flex",
+            width: "initial",
           }}
         >
           {images.map((image, index) => (
-            <img
+            <Image
               key={index}
               style={{
-                width: 179,
-                height: 179,
+                width: '7rem',
+                height: '9rem',
                 border: selectedImage === image ? "1px black solid" : "none",
+                cursor: "pointer",
               }}
               src={image.asset.url}
               alt={`image_${index}`}
@@ -46,9 +51,9 @@ const ImageGrid = ({ images }) => {
             />
           ))}
         </Col>
-        <Col xs={12} md={9}>
+        <Col xs={12} md={9} style={{ width: "65%", }}>
           <Image
-            style={{ width: 670, height: 869 }}
+            style={{ width: '100%', height: '20rem' }}
             src={selectedImage}
             alt="selected_image"
           />

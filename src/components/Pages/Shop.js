@@ -5,11 +5,16 @@ import ProductsWithPagination from "../Layouts/Home/ProductsWithPagination";
 
 const Shop = () => {
   const [shopResults, setShopResults] = useState([]);
+  const [resultChanged, setResultChanged] = useState(false);
   const location = useLocation();
-  const { value } = location.state;
+  const navigate = useNavigate();
   const { category } = useParams();
-
   const { productData } = useContext(ProductContext);
+  const value = location.state?.value || null;
+
+  // console.log(category, value);
+
+
 
   useEffect(() => {
     filterProducts();
@@ -18,17 +23,27 @@ const Shop = () => {
   const filterProducts = () => {
     if (productData && category && value) {
       const filteredProducts = productData?.filter(
-        (product) => product[value].toLowerCase() === category.toLowerCase()
+        (product) => product[value]?.toLowerCase() === category.toLowerCase()
       );
       setShopResults(filteredProducts);
+      setResultChanged(true)
     }
   };
 
-  console.log(shopResults);
+  useEffect(() => {
+
+    console.log(resultChanged, shopResults);
+
+    if (!value) {
+      navigate("/shop");
+    } else if (resultChanged && shopResults.length == 0) {
+      navigate("/shop");
+    }
+  }, [value, shopResults]);
 
   return (
     <>
-      <ProductsWithPagination productData={shopResults} />
+      <ProductsWithPagination productData={value ? shopResults : productData} />
     </>
   );
 };

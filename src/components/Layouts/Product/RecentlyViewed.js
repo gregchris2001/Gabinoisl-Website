@@ -7,7 +7,7 @@ const RecentlyViewed = () => {
 
   return (
     <div>
-      <h2>Recently Viewed</h2>
+      <h2 style={{ textAlign: "center", }} >Recently Viewed</h2>
       <ProductList productData={recentlyViewed} />
     </div>
   );

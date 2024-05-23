@@ -15,17 +15,18 @@ function SearchModal({handleClose, show}) {
   return (
     
     <Modal show={show} onHide={handleClose}>
-      <Form onSubmit={submitHandler}>
-        <InputGroup>
-          <InputGroup.Text>Search for Product</InputGroup.Text>
-          <Form.Control
+      <Form onSubmit={submitHandler} style={{ display: 'flex', }}>
+        <Form.Control
             type="text"
             placeholder="Enter Product Name..."
             value={product}
             onChange={(e) => setProduct(e.target.value)}
           />
-        </InputGroup>
-        <Button type='submit'>
+        {/* <InputGroup>
+          <InputGroup.Text>Search for Product</InputGroup.Text>
+          
+        </InputGroup> */}
+        <Button variant='danger' type='submit'>
             Search
         </Button>
       </Form>

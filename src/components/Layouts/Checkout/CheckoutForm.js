@@ -1,10 +1,11 @@
+import {useState} from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import { PaystackButton } from 'react-paystack';
 
-const CheckoutForm = () => {
+const CheckoutForm = ({totalAmount, cartData}) => {
 
-  const publicKey = "pk_your_public_key_here";
-  const totalAmount = total * 100;
+  const publicKey = "pk_test_15793661a775d86467c092f068aba18ed206f9b3";
+  const amount = totalAmount * 100;
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -28,22 +29,52 @@ const CheckoutForm = () => {
     // Add logic to handle form submission here
   };
 
+  const cartCustomFields = cartData?.map((item) => {
+    const totalPrice = item.quantity * item.price;
+    return {
+      display_name: item.title,
+      variable_name: item.title.toLowerCase().replace(/\s/g, "_"),
+      value: `Quantity: ${item.quantity}, Total Price: ₦${totalPrice}`,
+    };
+  });
+
   const componentProps = {
     email : formData.email,
-    amount : totalAmount,
+    amount,
     metadata: {
-      firstName : formData.firstName,
-      lastName : formData.lastName,
-      address : formData.address,
-      phoneNumber : formData.phoneNumber,
-      notes : formData.notes
+      custom_fields: [
+        {
+          display_name: "Name",
+          variable_name: "name",
+          value: `${formData.firstName} ${formData.lastName}`,
+        },
+        {
+          display_name: "Address",
+          variable_name: "address",
+          value: formData.address,
+        },
+        {
+          display_name: "Phone Number",
+          variable_name: "number",
+          value: formData.phoneNumber,
+        },
+        {
+          display_name: "Notes",
+          variable_name: "notes",
+          value: formData.notes,
+        },
+        ...cartCustomFields,
+      ],
+      
     },
     publicKey,
     text: "PROCEED WITH PAYMENT",
     onSuccess: (reference) =>
-      alert(reference),
+      console.logz(reference),
     onClose: () => alert("Wait! Don't leave :("),
   }
+
+  console.log(componentProps);
 
   return (
     <Form id="paymentForm" onSubmit={handleSubmit}>
@@ -122,7 +153,7 @@ const CheckoutForm = () => {
       <h4 className="mb-3">Payment</h4>
       <hr className="mb-4" />
       
-      <Button variant="danger" type="submit">
+      {/* <Button variant="danger" type="submit">
         <img
           src="https://paymentgateway.interswitchgroup.com/paymentgateway/public/images/isw_paynow_btn.png"
           alt="Pay Now"
@@ -130,9 +161,9 @@ const CheckoutForm = () => {
           className="isw-pay-logo"
         />
         <span style={{ marginTop: '10px', display: 'inline-block', marginLeft: '8px' }}>
-          <PaystackButton {...componentProps} />
         </span>
-      </Button>
+      </Button> */}
+      <PaystackButton {...componentProps} />
     </Form>
   );
 };

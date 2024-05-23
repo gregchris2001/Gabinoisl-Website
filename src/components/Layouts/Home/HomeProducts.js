@@ -12,7 +12,7 @@ const HomeProduct = () => {
 
   return (
     <>
-      <h1>Popular Product</h1>
+      <h1 style={{ textAlign: "center", }}>Popular Product</h1>
       <ProductList productData={filteredProducts} />
     </>
   );

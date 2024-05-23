@@ -21,7 +21,7 @@ const Header = () => {
     <header>
       <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
         <Container style={{ maxWidth: "100%", backgroundColor: "black" }}>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" className="bg-light"/>
           <Navbar.Brand href="/" style={{ width: "12rem" }}>
             <img
               src={Gabinoisl}
@@ -46,7 +46,7 @@ const Header = () => {
               </NavLink>
 
               <NavLink
-                to="/shop/pendant lights"
+                to="/shop/pendant lighting"
                 exact
                 className="nav-link"
                 style={{ color: "white" }}
@@ -56,7 +56,7 @@ const Header = () => {
               </NavLink>
 
               <NavLink
-                to="/shop/dining room chandeliers"
+                to="/shop/dining room"
                 exact
                 className="nav-link"
                 style={{ color: "white" }}
@@ -66,7 +66,7 @@ const Header = () => {
               </NavLink>
 
               <NavLink
-                to="/shop/foyer chandeliers"
+                to="/shop/foyer"
                 exact
                 className="nav-link"
                 style={{ color: "white" }}
@@ -76,7 +76,7 @@ const Header = () => {
               </NavLink>
 
               <NavLink
-                to="/shop/ceiling fans"
+                to="/shop/ceiling fan"
                 exact
                 className="nav-link"
                 style={{ color: "white" }}
@@ -86,7 +86,7 @@ const Header = () => {
               </NavLink>
 
               <NavLink
-                to="/shop/lamps"
+                to="/shop/lamp"
                 exact
                 className="nav-link"
                 style={{ color: "white" }}
@@ -106,7 +106,7 @@ const Header = () => {
               </NavLink>
 
               <NavLink
-                to="/shop/new arrival"
+                to="/shop/new arrivals"
                 exact
                 className="nav-link"
                 style={{ color: "white" }}

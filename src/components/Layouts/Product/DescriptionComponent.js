@@ -1,6 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap';
 
-const DescriptionComponent = ({ desciption }) => {
+const DescriptionComponent = ({ description }) => {
     return (
         <Container style={{ width: '100%', height: '100%', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 6, display: 'inline-flex' }}>
             <Row>
@@ -10,7 +10,7 @@ const DescriptionComponent = ({ desciption }) => {
             </Row>
             <Row>
                 <Col>
-                    <div style={{ width: 772, color: 'black', fontSize: 15, fontFamily: 'Inter', fontWeight: 500, wordWrap: 'break-word' }}>{desciption}</div>
+                    <p style={{ color: 'black', fontSize: 15, fontFamily: 'Inter', fontWeight: 500, wordWrap: 'break-word' }}>{description}</p>
                 </Col>
             </Row>
         </Container>

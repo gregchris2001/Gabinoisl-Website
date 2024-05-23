@@ -30,7 +30,8 @@ const Product = () => {
 
   // Determine which product data to use
   const product = productFromState || productFromContext;
-  const descriptionText = product.description
+  // console.log(product, productFromContext, productFromState);
+  const descriptionText = product?.description
     .map((block) => block.children.map((child) => child.text).join(" "))
     .join(" ");
 
@@ -39,41 +40,48 @@ const Product = () => {
     if (product) {
       changeRecentlyViewed(product);
     }
-  }, [product, changeRecentlyViewed]);
+  }, [product]);
 
-  useEffect(() => {
-    // Check if product is in cart
-    const productInCart = cartData?.find(
-      (product) => product.id === product.id
-    );
-    if (productInCart) {
-      setInCart(true);
-      setQuantity(productInCart.quantity);
-    } else {
-      setInCart(false);
-      setQuantity(1);
-    }
-  }, [cartData]);
+useEffect(() => {
+  // Check if product is in cart
+  const productInCart = cartData?.find(p => p.slug.current === product?.slug.current);
+
+  setInCart(!!productInCart);
+  setQuantity(productInCart ? productInCart.quantity : 1);
+}, [cartData, product]); // Ensures useEffect runs only if cartData or product changes
+
 
   const handleAddToCart = () => {
     // Add product to cart with quantity
-    const cartProduct = { id: product.id, quantity: quantity };
+    const cartProduct = { ...product, quantity: quantity };
+      console.log(cartProduct);
     addCartData(cartProduct);
   };
 
   const handleQuantityChange = (newQuantity) => {
+    console.log(inCart, newQuantity);
+    setQuantity(newQuantity);
+
     if (inCart) {
       // Update product quantity in cart
-      changeCartProductQuantity(product.id, newQuantity);
-      setQuantity(newQuantity);
-      if (newQuantity === 0) {
-        // Remove product from cart if quantity is zero
-        removeCartData(product.id);
-      }
-    } else {
-      // Set quantity for product not in cart
-      setQuantity(newQuantity);
+      changeCartProductQuantity(product.slug, newQuantity);
+    } 
+  };
+
+  const handleRemoveCartData = () => {
+    if (inCart) {
+      removeCartData(product.slug);
     }
+  };
+
+    const getButtonText = () => {
+      if (product.total_quantity <= 0) {
+          return 'Out of Stock';  // No stock available
+      }
+      if (inCart) {
+          return 'Added to Cart';  // Item is in the cart
+      }
+      return 'Add to Cart';  // Item can be added to cart
   };
 
   return (
@@ -81,14 +89,21 @@ const Product = () => {
       {product ? (
         <Container>
           <Row>
-            <Col md={6}>
+            <Col md={6} style={{ marginBottom: "1rem" }}>
               <ImageGrid images={product.images} />
             </Col>
-            <Col md={6}>
+            <Col 
+              md={6} 
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "1rem",
+              }}
+            >
               <Row>
                 <Col>
                   <h2>{product.title}</h2>
-                  <p>Price: {product.price}</p>
+                  <h4>Price: ₦ {product.price}</h4>
                 </Col>
               </Row>
               <Row>
@@ -97,18 +112,25 @@ const Product = () => {
                 </Col>
               </Row>
               <Row>
-                <Col>
+                <Col
+                  style={{
+                    display: "flex",
+                    gap: "1rem",
+                  }}
+                >
                   <Button
                     variant={inCart ? "secondary" : "danger"}
                     onClick={handleAddToCart}
-                    disabled={inCart}
+                    disabled={inCart ||product.total_quantity <= 0}
                   >
-                    {inCart ? "Added to Cart" : "Add to Cart"}
+                    {getButtonText()}
                   </Button>
                   <QuantityButtonGroup
-                    totalQuantity={product.totalQuantity}
+                    totalQuantity={product.total_quantity}
                     quantity={quantity}
                     onQuantityChange={handleQuantityChange}
+                    removeCartDataHandler={handleRemoveCartData}
+                    inCart={inCart}
                   />
                 </Col>
               </Row>

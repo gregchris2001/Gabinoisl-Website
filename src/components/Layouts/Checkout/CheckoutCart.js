@@ -1,17 +1,13 @@
-import { useContext } from 'react';
 import { Col, Badge, ListGroup } from 'react-bootstrap';
-import ProductContext from '../../../store/product-context';
 import CheckoutCartItem from './CheckoutCartItem';
 
-const CheckoutCart = ({ total, cartItemCount }) => {
-
-  const { cartData } = useContext(ProductContext);
+const CheckoutCart = ({cartData, totalAmount, cartItemCount}) => {
 
   return (
     <Col md={4} className="order-md-2 mb-4">
       <h4 className="d-flex justify-content-between align-items-center mb-3">
         <span className="text-muted">Your cart</span>
-        <Badge pill variant="secondary" id="cart-badge">
+        <Badge pill bg="danger" id="cart-badge">
           {cartItemCount}
         </Badge>
       </h4>
@@ -22,7 +18,7 @@ const CheckoutCart = ({ total, cartItemCount }) => {
       </ListGroup>
       <ListGroup.Item className="d-flex justify-content-between">
         <span>Total (Naira)</span>
-        <strong id="total">₦{total}</strong>
+        <strong id="total">₦{totalAmount}</strong>
       </ListGroup.Item>
     </Col>
   );

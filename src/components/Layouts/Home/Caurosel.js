@@ -27,12 +27,12 @@ const Caurosel = () => {
   ];
 
   return (
-    <Card>
+    <Card style={{ transform: "translateY(-1rem)", }}>
       <Card.Img
         variant="top"
         src={GabinoislHome}
         alt="GabinoIsl Home"
-        style={{ height: "50rem" }}
+        // style={{ height: "50rem" }}
       />
 
       <Card.Body
@@ -40,6 +40,7 @@ const Caurosel = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
+          flexWrap: "wrap",
         }}
       >
         {context.map((ctx, index) => (
@@ -49,14 +50,15 @@ const Caurosel = () => {
               display: "flex",
               alignItems: "center",
               gap: "1rem",
+              fontSize: "0.8rem",
             }}
           >
             <FontAwesomeIcon
               icon={ctx.icon}
-              style={{ fontSize: "xxx-large" }}
+              style={{ fontSize: "1.2rem" }}
             />
             <div className="ctx-txt">
-              <h4>{ctx.head}</h4>
+              <h4 style={{ fontSize: "initial" }}>{ctx.head}</h4>
               <p>{ctx.text}</p>
             </div>
           </div>

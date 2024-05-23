@@ -44,22 +44,28 @@ const ShopList = () => {
             flexDirection: "column",
             alignItems: "center",
             gap: "2rem",
+            width: "100%",
           }}
         >
           <h1>Shop By Rooms</h1>
 
           <div
             style={{
-              width: "100%",
+              width: "92%",
               height: "100%",
-              justifyContent: "flex-start",
+              justifyContent: "center",
               alignItems: "flex-start",
-              gap: "71px",
+              gap: "1.5rem",
               display: "flex",
+              flexWrap: "wrap",
             }}
           >
             {shops.rooms.map((shop, index) => (
-              <ShopItem key={index} shop={shop} />
+              <ShopItem 
+                key={index} 
+                shop={shop} 
+                value={'room'}
+              />
             ))}
           </div>
         </div>
@@ -71,22 +77,28 @@ const ShopList = () => {
             flexDirection: "column",
             alignItems: "center",
             gap: "2rem",
+            width: "100%",
           }}
         >
           <h1>Shop By Types</h1>
 
           <div
             style={{
-              width: "100%",
+              width: "92%",
               height: "100%",
-              justifyContent: "flex-start",
+              justifyContent: "center",
               alignItems: "flex-start",
-              gap: "71px",
+              gap: "1.5rem",
               display: "flex",
+              flexWrap: "wrap",
             }}
           >
             {shops.types.map((shop, index) => (
-              <ShopItem key={index} shop={shop} />
+              <ShopItem 
+                key={index} 
+                shop={shop} 
+                value={'type'}
+              />
             ))}
           </div>
         </div>

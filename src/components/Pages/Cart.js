@@ -14,14 +14,7 @@ const Cart = () => {
                         <Row>
                             <Col lg={6} md={6} sm={6}>
                                 <div>
-                                    <a href="./shop.html" style={{ color: '#444444' }}>Continue Shopping</a>
-                                </div>
-                            </Col>
-                            <Col lg={6} md={6} sm={6}>
-                                <div>
-                                    <Button variant="primary" className="update-cart-btn" id="update-cart-btn">
-                                        <i className="fa fa-spinner"></i> Update cart
-                                    </Button>
+                                    <a href="/shop" style={{ color: '#444444' }}>Continue Shopping</a>
                                 </div>
                             </Col>
                         </Row>
