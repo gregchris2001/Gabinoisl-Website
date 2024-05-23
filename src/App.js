@@ -11,9 +11,8 @@ import Contact from "./components/Pages/Contact";
 import Pages from "./components/Pages/Pages";
 import Product from "./components/Pages/Product";
 import Shop from "./components/Pages/Shop";
+import ShopAll from "./components/Pages/ShopAll";
 import Search from "./components/Pages/Search";
-
-import ProductImg from "./images/product-img.png";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
@@ -23,16 +22,6 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { faFontAwesome } from "@fortawesome/free-brands-svg-icons";
 library.add(fas, faFontAwesome);
-// const products = [
-//   {
-//     title:
-//       "Luxury Solar System Spiral Raindrop Chandelier For Foyer and Entryway",
-//     description:
-//       "Luxury Solar System Spiral Raindrop Chandelier For Foyer and Entryway",
-//     img: ProductImg,
-//     price: "55,000",
-//   },
-// ];
 
 const router = createBrowserRouter([
   {
@@ -68,6 +57,10 @@ const router = createBrowserRouter([
       {
         path: "/pages/:page",
         element: <Pages />,
+      },
+      {
+        path: "/shop",
+        element: <ShopAll />,
       },
       {
         path: "/shop/:category",
@@ -112,7 +105,12 @@ function App() {
   const { changeProductData } = useContext(ProductContext);
   console.log(products);
 
-  changeProductData(products);
+useEffect(() => {
+  if (products) {
+    changeProductData(products);
+  }
+}, [products]); 
+
 
   return <RouterProvider router={router}></RouterProvider>;
 }

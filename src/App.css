@@ -1,0 +1,30 @@
+/* custom.css */
+*{
+   box-sizing: border-box;
+}
+
+#root {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+}
+
+/* Override pagination item styles */
+.pagination .page-link {
+   background-color: white !important;
+   border-color: #dc3545 !important;
+   color: #dc3545 !important;
+}
+
+.pagination .page-link:hover  {
+   background-color: #bb2d3b !important;
+   border-color: #b02a37 !important;
+   color: white !important;
+}
+
+/* Override active pagination item styles */
+.pagination .page-item.active .page-link {
+   background-color: #dc3545 !important;
+   border-color: #dc3545 !important;
+   color: white !important;
+}
