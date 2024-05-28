@@ -5,6 +5,8 @@ import sanityClient from "./client";
 import RootLayout from "./components/Layouts/RootLayout";
 import Home from "./components/Pages/Home";
 import About from "./components/Pages/About";
+import Blog from "./components/Layouts/Blog/Blog";
+import BlogPost from "./components/Pages/BlogPost";
 import Cart from "./components/Pages/Cart";
 import Checkout from "./components/Pages/Checkout";
 import Contact from "./components/Pages/Contact";

@@ -78,7 +78,7 @@ const ProductItem = ({ product }) => {
           <Card.Text
             style={{ color: "#B5B5B5", fontSize: 10, fontWeight: "600" }}
           >
-            24H Delivery within Lagos
+            24-48 hours Delivery within Lagos
           </Card.Text>
           <Card.Text style={{ color: "blue", fontSize: 10, fontWeight: "600" }}>
             Fast Delivery

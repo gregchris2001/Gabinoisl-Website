@@ -5,7 +5,7 @@ const ShippingDetailsCard = () => {
     const currentDate = new Date();
     
     // Calculate delivery date (current date + 24 hours)
-    const deliveryDate = new Date(currentDate.getTime() + (24 * 60 * 60 * 1000));
+    const deliveryDate = new Date(currentDate.getTime() + (48 * 60 * 60 * 1000));
     const deliveryDateString = `${deliveryDate.getMonth() + 1}/${deliveryDate.getDate()} - ${deliveryDate.getMonth() + 1}/${deliveryDate.getDate() + 1}`;
 
     return (
@@ -20,7 +20,7 @@ const ShippingDetailsCard = () => {
                     }}
                 >
                     <Badge bg="warning" style={{ padding: "0.5rem" }}>Fast Delivery</Badge>
-                    Dispatch within 24 hours within Lagos
+                    Delivery takes 24-48 hours within Lagos and 3-5 business working days outside Lagos.
                 </Card.Text>
                 <Card.Text 
                     style={{
