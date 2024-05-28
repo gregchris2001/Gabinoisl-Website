@@ -31,7 +31,7 @@
 
 .product-item:hover,
 .shop-item:hover {
-   transform: scale(1.2);
+   transform: scale(1.02);
 }
 
 footer>a {
@@ -46,7 +46,7 @@ footer>a {
    }
 
    .product-item .row img {
-      height: 20rem;
+      height: 20rem !important;
    }
 
    .product-item .row .card-body {
@@ -60,11 +60,12 @@ footer>a {
       gap: 1rem;
    }
 
-   footer > div:nth-last-child() {
+   footer > div {
       width: 50%;
    }
 
    footer > div:last-child {
+      width: 100%;
       position: absolute;
       bottom: 0;
       margin-left: auto;

@@ -137,10 +137,24 @@ const Header = () => {
               to="/cart"
               exact
               className="nav-link"
-              style={{ color: "white", fontSize: "1.2rem", }}
+              style={{ 
+                color: "white", 
+                fontSize: "1.2rem", 
+                display: "flex",
+                alignItems: "center",
+                position: "relative",
+              }}
             >
               <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />
-              <Badge pill bg="danger" id="cart-badge">
+              <Badge 
+                pill bg="danger" 
+                id="cart-badge"
+                style={{
+                  position: "absolute",
+                  top: "-1px",
+                  right: "-0.5rem"
+                }}
+              >
                 {cartItemCount}
               </Badge>
             </NavLink>
