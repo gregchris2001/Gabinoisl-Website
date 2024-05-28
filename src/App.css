@@ -1,5 +1,5 @@
 /* custom.css */
-*{
+* {
    box-sizing: border-box;
 }
 
@@ -16,7 +16,7 @@
    color: #dc3545 !important;
 }
 
-.pagination .page-link:hover  {
+.pagination .page-link:hover {
    background-color: #bb2d3b !important;
    border-color: #b02a37 !important;
    color: white !important;
@@ -27,4 +27,50 @@
    background-color: #dc3545 !important;
    border-color: #dc3545 !important;
    color: white !important;
+}
+
+.product-item:hover,
+.shop-item:hover {
+   transform: scale(1.2);
+}
+
+footer>a {
+   text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+
+   .product-item,
+   .shop-item {
+      width: 18rem !important;
+   }
+
+   .product-item .row img {
+      height: 20rem;
+   }
+
+   .product-item .row .card-body {
+      padding-left: 2rem;
+   }
+
+   footer {
+      display: flex;
+      position: relative;
+      flex-wrap: wrap;
+      gap: 1rem;
+   }
+
+   footer > div:nth-last-child() {
+      width: 50%;
+   }
+
+   footer > div:last-child {
+      position: absolute;
+      bottom: 0;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      text-align: center;
+   }
 }

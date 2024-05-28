@@ -13,6 +13,7 @@ const ShopItem = ({ shop, value }) => {
   
   return (
     <Card
+      className="shop-item"
       style={{
         width: "10rem",
         flexDirection: "column",

@@ -5,6 +5,7 @@ const ProductProvider = ({ children }) => {
   const [productData, setProductData] = useState([]);
   const [cartData, setCartData] = useState([]);
   const [recentlyViewed, setRecentlyViewed] = useState([]);
+  const [blogPosts, setBlogPosts] = useState([]);
 
   // Load recently viewed data from local storage on component mount
   useEffect(() => {
@@ -28,6 +29,10 @@ const ProductProvider = ({ children }) => {
   useEffect(() => {
     localStorage.setItem('cartData', JSON.stringify(cartData));
   }, [cartData]);
+
+  const changeBlogPosts = (state) => {
+    setBlogPosts(state);
+  }
 
   const changeProductData = (state) => {
     setProductData(state);
@@ -76,6 +81,8 @@ const ProductProvider = ({ children }) => {
         changeCartProductQuantity: changeCartProductQuantity,
         recentlyViewed: recentlyViewed,
         changeRecentlyViewed: changeRecentlyViewed,
+        blogPosts: blogPosts,
+        changeBlogPosts: changeBlogPosts,
       }}
     >
       {children}

@@ -9,6 +9,9 @@ const ProductContext = React.createContext({
     
     recentlyViewed : [],
     changeRecentlyViewed : () => {},
+
+    blogPosts : [],
+    changeBlogPosts : () => {},
 });
 
 export default ProductContext;

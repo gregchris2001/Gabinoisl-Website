@@ -1,12 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { Nav, Navbar, Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SearchModal from "./Home/SearchModal";
+import ProductContext from "../../store/product-context";
 
 import Gabinoisl from "../../images/gabinoisl-logo.png";
 
 const Header = () => {
+  const [cartItemCount, setCartItemCount] = useState(0);
+  const { cartData } = useContext(ProductContext);
+
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -17,11 +21,15 @@ const Header = () => {
     handleShow();
   };
 
+  useEffect(() => {
+    setCartItemCount(cartData.length);
+  }, [cartData]);
+
   return (
     <header>
       <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
         <Container style={{ maxWidth: "100%", backgroundColor: "black" }}>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" className="bg-light"/>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" className="bg-light" />
           <Navbar.Brand href="/" style={{ width: "12rem" }}>
             <img
               src={Gabinoisl}
@@ -121,7 +129,7 @@ const Header = () => {
               onClick={searchHandler}
               exact
               className="nav-link"
-              style={{ color: "white" }}
+              style={{ color: "white", fontSize: "1.2rem", }}
             >
               <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
             </NavLink>
@@ -129,9 +137,12 @@ const Header = () => {
               to="/cart"
               exact
               className="nav-link"
-              style={{ color: "white" }}
+              style={{ color: "white", fontSize: "1.2rem", }}
             >
               <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />
+              <Badge pill bg="danger" id="cart-badge">
+                {cartItemCount}
+              </Badge>
             </NavLink>
           </Nav>
         </Container>

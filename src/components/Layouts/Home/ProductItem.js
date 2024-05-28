@@ -61,7 +61,7 @@ const ProductItem = ({ product }) => {
   };
 
   return (
-    <Card style={{ width: "10rem", alignItems: 'center', paddingBottom: '1rem', }}>
+    <Card className="product-item" style={{ width: "10rem", alignItems: 'center', paddingBottom: '1rem', }}>
       <Row onClick={productPageHandler}>
         <Card.Img 
           variant="top" 

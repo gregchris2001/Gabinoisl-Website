@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Footer = () => {
   return (
-    <footer style={{ width: "100%", backgroundColor: "gray", padding: "20px" }}>
+    <footer style={{ width: "100%", backgroundColor: "gray", padding: "1.5rem" }}>
       <div style={{ color: "white" }}>
         <h5>COMPANY</h5>
         <ul>
@@ -66,8 +66,8 @@ const Footer = () => {
         <h5>FOLLOW US</h5>
         {/* Add your social media icons here */}
       </div>
-      <hr/>
       <div style={{ color: "white" }}>
+        <hr/>
         <p>© 2022-2023, Gabinoisl | Powered by Gregchris™</p>
       </div>
     </footer>
