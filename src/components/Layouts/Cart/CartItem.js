@@ -28,7 +28,7 @@ const CartItem = ({ product }) => {
                     <Col>
                         <div>
                             <h6>{title}</h6>
-                            <h5 style={{ color: '#e53637' }}>₦ {price}</h5>
+                            <h6 style={{ color: '#e53637' }}>₦ {price}</h6>
                         </div>
                     </Col>
                 </Row>
@@ -41,7 +41,7 @@ const CartItem = ({ product }) => {
                     removeCartDataHandler={removeCartItemHandler}
                 />
             </td>
-            <td><h6>₦ {quantity * price}</h6></td>
+            <td><p>₦ {quantity * price}</p></td>
             <td>
                 <Button variant='danger' onClick={removeCartItemHandler}>
                     <FontAwesomeIcon icon="fa fa-close" />

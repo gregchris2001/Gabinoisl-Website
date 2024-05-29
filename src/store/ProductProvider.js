@@ -4,6 +4,7 @@ import ProductContext from './product-context';
 const ProductProvider = ({ children }) => {
   const [productData, setProductData] = useState([]);
   const [cartData, setCartData] = useState([]);
+  const [cartUpdated, setCartUpdated] = useState(false);
   const [recentlyViewed, setRecentlyViewed] = useState([]);
   const [blogPosts, setBlogPosts] = useState([]);
 
@@ -15,7 +16,7 @@ const ProductProvider = ({ children }) => {
     if (storedRecentlyViewed) {
       setRecentlyViewed(JSON.parse(storedRecentlyViewed));
     }
-
+    
     if (storedCartData) {
       setCartData(JSON.parse(storedCartData));
     }
@@ -23,11 +24,16 @@ const ProductProvider = ({ children }) => {
 
   // Save recently viewed data to local storage whenever it updates
   useEffect(() => {
+    console.log(recentlyViewed);
     localStorage.setItem('recentlyViewed', JSON.stringify(recentlyViewed));
   }, [recentlyViewed]);
 
   useEffect(() => {
+  if (cartData.length > 0 && cartUpdated) { 
     localStorage.setItem('cartData', JSON.stringify(cartData));
+  } else if (cartData.length <= 0 && cartUpdated) {
+    localStorage.setItem('cartData', JSON.stringify(cartData));
+  }
   }, [cartData]);
 
   const changeBlogPosts = (state) => {
@@ -40,33 +46,44 @@ const ProductProvider = ({ children }) => {
 
   const addCartData = (newCartData) => {
     setCartData(prevCartData => [...prevCartData, newCartData]);
+    setCartUpdated(true);
   };
 
-  const removeCartData = (productIdToRemove) => {
-    setCartData(prevCartData => prevCartData.filter(product => product.id !== productIdToRemove));
+  const removeCartData = (productSlugToRemove) => {
+    setCartData(prevCartData => prevCartData.filter(product => product.slug.current !== productSlugToRemove.current));
+    setCartUpdated(true);
   };
 
-  const changeCartProductQuantity = (productId, newQuantity) => {
+  const changeCartProductQuantity = (productSlug, newQuantity) => {
     setCartData(prevCartData => {
       return prevCartData.map(product => {
-        if (product.id === productId) {
+        if (product.slug.current === productSlug.current) {
           return { ...product, quantity: newQuantity };
         }
         return product;
       });
     });
+    setCartUpdated(true);
   };
   
-  const changeRecentlyViewed = (newRecentlyViewed) => {
-    setRecentlyViewed(prevRecentlyViewed => {
+  
+const changeRecentlyViewed = (newRecentlyViewed) => {
+  setRecentlyViewed(prevRecentlyViewed => {
+    // Check if the item already exists
+    const exists = prevRecentlyViewed.some(item => item.slug.current === newRecentlyViewed.slug.current);
 
+    if (!exists) {
+      // If it does not exist, proceed to add
       if (prevRecentlyViewed.length >= 4) {
         prevRecentlyViewed.shift(); // Remove the first item (oldest)
       }
-
       return [...prevRecentlyViewed, newRecentlyViewed];
-    });
-  };
+    }
+
+    // If it exists, just return the previous state
+    return prevRecentlyViewed;
+  });
+};
   
   
 
