@@ -10,6 +10,8 @@ const Contact = () => {
         message: ''
       });
     
+      const [responseMessage, setResponseMessage] = useState('');
+
       const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -21,6 +23,22 @@ const Contact = () => {
       const handleSubmit = (e) => {
         e.preventDefault();
         console.log(formData);
+
+        fetch('/contact.php', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: new URLSearchParams(formData).toString(),
+        })
+        .then(response => response.json())
+        .then(data => {
+          setResponseMessage(data.message);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          setResponseMessage('An error occurred while sending the message.');
+        });
       };
 
     return (
