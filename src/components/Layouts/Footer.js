@@ -44,13 +44,13 @@ const Footer = () => {
         <h5>CUSTOMER SERVICE</h5>
         <ul>
           <li>
-            <a href="" style={{ color: "white" }}>
+            <a href="tel:+2349160000789" style={{ color: "white" }}>
               Mobile Support: +234-916-000-0789
             </a>
           </li>
           <li>Hours: 9:00 AM - 6:00 PM WAT</li>
           <li>
-            <a href="" style={{ color: "white" }}>
+            <a href="mailto:gabinoisl01@gmail.com " style={{ color: "white" }}>
               Email Support: admin@gabinoisl.com
             </a>
           </li>
@@ -64,7 +64,20 @@ const Footer = () => {
       </div>
       <div style={{ color: "white" }}>
         <h5>FOLLOW US</h5>
-        {/* Add your social media icons here */}
+        <span>
+           <a href="https://www.facebook.com/Gabinoisltd/" target="_blank" rel="noopener noreferrer" className="text-white mx-3">
+              <FontAwesomeIcon icon={faFacebook} size="2x" />
+            </a>
+            <a href="https://twitter.com/gabinoisl" target="_blank" rel="noopener noreferrer" className="text-white mx-3">
+              <FontAwesomeIcon icon={faTwitter} size="2x" />
+            </a>
+            <a href="https://www.instagram.com/gabino.isl/" target="_blank" rel="noopener noreferrer" className="text-white mx-3">
+              <FontAwesomeIcon icon={faInstagram} size="2x" />
+            </a>
+            <a href="https://api.whatsapp.com/message/P7IGH7JW3Y6WO1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer" className="text-white mx-3">
+              <FontAwesomeIcon icon={faWhatsapp} size="2x" />
+            </a>
+        </span>
       </div>
       <div style={{ color: "white" }}>
         <hr/>

@@ -11,15 +11,27 @@ const About = () => {
             <Row>
                 <Col>
                     <p style={{ fontSize: "1.3rem", fontFamily: 'Podkova', fontWeight: 500, wordWrap: 'break-word' }}>
-                        Founded in the early 2010s, Vintage Lighting Ltd, and Chandelierias have created a vintage lighting, lamp, fixture, and LED from our specialty manufacturing facilities. 
+                        Established in 2021, Gabino Lights originated in the vibrant city of Lagos, Nigeria. Nestled in the heart of Surulere, at 4 Badaru Street, off Adegoke, Olufemi, Gabino Lights has been illuminating homes and spaces with a touch of elegance and functionality.                    
                     </p>
 
                     <p style={{ fontSize: "1.3rem", fontFamily: 'Podkova', fontWeight: 500, wordWrap: 'break-word' }}>
-                        Our company operates its own vintage lighting manufacturing factories in the USA, Mexico, China, and Vietnam. Chandelierias has become a leading eCommerce website for vintage chandeliers and lighting decor with extraordinary handmade designs from skilled craftsmen. Chandelierias has evolved into a specialty manufacturer capable of providing customers with unique chandeliers, chandelier LEDs, chandelier ceiling lights, and chandelier lighting fixtures. We have hundreds of types of chandelier lighting styles to choose from, with talented chandelier lighting designers and craftsmen, keeping our Chandelierias eCommerce website on the front of today's trends. Our goal is to offer a complete selection of quality Chandelierias fixtures at the lowest prices, and with the best online shopping experience for our customers. 
+                        At Gabino Lights, we specialize in offering fashionable and unique pendant lights that not only brighten up spaces but also add a touch of sophistication to any environment. Our mission is to provide high-quality lighting solutions that effortlessly blend with contemporary design trends, while also prioritizing energy efficiency and sustainability.
                     </p>
 
                     <p style={{ fontSize: "1.3rem", fontFamily: 'Podkova', fontWeight: 500, wordWrap: 'break-word' }}>
-                        From vintage chandelier lighting to handcrafted chandelier fixtures, we have a wide range of styles for you to discover your very own unique chandelier right here! Also, our website includes detailed merchandise information, full-color photographs with zoom capabilities, and a close product recommendation service so that you can shop easily for the comfort of your home. Chandelierias is proud to be part of the Vintage Lighting Ltd group and what you see on our website is just a small portion of the many products we manufacture.<br />U.S. Office & Warehouse<br />Chandelierias Vintage Lighting Ltd 1160 W Rincon St., Building B Corona, CA 92878 Phone: 1-213-222-6148 Email: lights@chandelierias.com                    
+                        What sets us apart is our commitment to offering value without compromising on quality. We believe that creating a beautifully lit space shouldn't have to "break the bank," and that's why we strive to offer affordable yet luxurious lighting options for our customers.
+                    </p>
+
+                    <p style={{ fontSize: "1.3rem", fontFamily: 'Podkova', fontWeight: 500, wordWrap: 'break-word' }}>
+                        Whether you're looking to enhance the ambiance of your home or seeking to elevate the aesthetic appeal of your commercial space, Gabino Lights is here to help you find the perfect lighting solution tailored to your unique style and preferences.
+                    </p>
+
+                    <p style={{ fontSize: "1.3rem", fontFamily: 'Podkova', fontWeight: 500, wordWrap: 'break-word' }}>
+                        Contact us today at <a href="mailto:gabinoisl01@gmail.com" >gabinoisl01@gmail.com</a> or give us a call at <a href="tel:+2349160000789">+2349160000789</a> to discover how we can illuminate your world with our exquisite range of chandelier lights and professional installation services.
+                    </p>
+
+                    <p style={{ fontSize: "1.3rem", fontFamily: 'Podkova', fontWeight: 500, wordWrap: 'break-word' }}>
+                        Illuminate your space with Gabino Lights – where elegance meets affordability
                     </p>
                 </Col>
             </Row>
