@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const BlogItem = ({ blogPost }) => {
   const { title, author, authorImage, date, image } = blogPost;
+  const navigate = useNavigate();
   
   const articleText = blogPost?.article
     .map((block) => block.children.map((child) => child.text).join(" "))
