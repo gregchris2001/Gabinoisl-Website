@@ -114,13 +114,37 @@ function App() {
   }, []);
   const { changeProductData } = useContext(ProductContext);
   console.log(products);
-
-useEffect(() => {
-  if (products) {
-    changeProductData(products);
-  }
-}, [products]); 
-
+  const [blog, setBlog] = useState();
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "blog"] {
+            title,
+            slug,
+            author,
+            authorImage[]{
+                asset->{
+                  url
+                }
+            },
+            Image[]{
+              asset->{
+                url
+              }
+          },
+          Article,
+          publishedAt
+                      }`
+      )
+      .then((data) => setBlog(data))
+      .catch(console.error);
+  }, []);
+  console.log(blog);
+  useEffect(() => {
+    if (products) {
+      changeProductData(products);
+    }
+  }, [products]);
 
   return <RouterProvider router={router}></RouterProvider>;
 }

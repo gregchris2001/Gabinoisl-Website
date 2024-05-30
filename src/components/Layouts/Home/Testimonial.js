@@ -1,4 +1,6 @@
 import TestimonyImg from "../../../images/testimony-img.png";
+import sanityClient from "../../../client";
+import { useState, useEffect } from "react";
 import { Card } from "react-bootstrap";
 
 const Testimonials = () => {
@@ -9,7 +11,25 @@ const Testimonials = () => {
       name: "— Steven W.",
     },
   ];
+  const [testimonials, setTestimonials] = useState();
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "testimonial"] {
+          name,
+          image[]{
+              asset->{
+                url
+              }
+          },
+          testimonial
+        }`
+      )
+      .then((data) => setTestimonials(data))
+      .catch(console.error);
+  }, []);
 
+  console.log(testimonials);
   return (
     <div
       style={{
