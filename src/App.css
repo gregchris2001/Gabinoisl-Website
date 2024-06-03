@@ -70,7 +70,7 @@ footer a {
    }
 
    footer > div {
-      width: 49%;
+      width: 24%;
    }
 
    footer > div:last-child {
@@ -83,4 +83,10 @@ footer a {
       right: 0;
       text-align: center;
    }
+}
+
+header {
+   position: sticky;
+   top: 0;
+   z-index: 100;
 }
