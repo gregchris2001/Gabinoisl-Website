@@ -85,7 +85,10 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  const { changeProductData, changeBlogPosts } = useContext(ProductContext);
   const [products, setProducts] = useState();
+  const [blog, setBlog] = useState();
+  
   useEffect(() => {
     sanityClient
       .fetch(
@@ -112,9 +115,8 @@ function App() {
       .then((data) => setProducts(data))
       .catch(console.error);
   }, []);
-  const { changeProductData } = useContext(ProductContext);
   console.log(products);
-  const [blog, setBlog] = useState();
+
   useEffect(() => {
     sanityClient
       .fetch(
@@ -140,11 +142,18 @@ function App() {
       .catch(console.error);
   }, []);
   console.log(blog);
+
   useEffect(() => {
     if (products) {
       changeProductData(products);
     }
   }, [products]);
+
+  useEffect(() => {
+    if (blog) {
+      changeBlogPosts(blog);
+    }
+  }, [blog]);
 
   return <RouterProvider router={router}></RouterProvider>;
 }

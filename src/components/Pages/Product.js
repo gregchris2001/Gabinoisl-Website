@@ -1,6 +1,6 @@
 import { useContext, useState, useEffect } from "react";
 import { useLocation, useParams } from "react-router-dom";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col, Button, Alert } from "react-bootstrap";
 import ImageGrid from "../Layouts/Product/ImageGrid";
 import ShippingDetailsCard from "../Layouts/Product/ShippingDetailsCard";
 import QuantityButtonGroup from "../Layouts/Product/QuantityButtonGroup";
@@ -22,6 +22,8 @@ const Product = () => {
   const { item } = useParams();
   const [inCart, setInCart] = useState(false);
   const [quantity, setQuantity] = useState(1);
+  const [alertMessage, setAlertMessage] = useState(null); 
+  const [showAlert, setShowAlert] = useState(false);
 
   const productFromState = state && state.product;
   const productFromContext = productData?.find(
@@ -54,8 +56,10 @@ useEffect(() => {
   const handleAddToCart = () => {
     // Add product to cart with quantity
     const cartProduct = { ...product, quantity: quantity };
-      console.log(cartProduct);
+    console.log(cartProduct);
     addCartData(cartProduct);
+    setAlertMessage('Added to cart');
+    setShowAlert(true);
   };
 
   const handleQuantityChange = (newQuantity) => {
@@ -71,6 +75,8 @@ useEffect(() => {
   const handleRemoveCartData = () => {
     if (inCart) {
       removeCartData(product.slug);
+      setAlertMessage('Removed from cart');
+      setShowAlert(true);
     }
   };
 
@@ -79,13 +85,18 @@ useEffect(() => {
           return 'Out of Stock';  // No stock available
       }
       if (inCart) {
-          return 'Added to Cart';  // Item is in the cart
+          return 'Remove From Cart';  // Item is in the cart
       }
       return 'Add to Cart';  // Item can be added to cart
   };
 
   return (
     <>
+      {showAlert && (
+        <Alert variant="success" onClose={() => setShowAlert(false)} dismissible>
+          {alertMessage}
+        </Alert>
+      )}
       {product ? (
         <Container>
           <Row>
@@ -119,9 +130,9 @@ useEffect(() => {
                   }}
                 >
                   <Button
-                    variant={inCart ? "secondary" : "danger"}
-                    onClick={handleAddToCart}
-                    disabled={inCart ||product.total_quantity <= 0}
+                    variant={inCart ? "secondary" : "dark"}
+                    onClick={inCart ? handleRemoveCartData : handleAddToCart}
+                    disabled={product.total_quantity <= 0}
                   >
                     {getButtonText()}
                   </Button>

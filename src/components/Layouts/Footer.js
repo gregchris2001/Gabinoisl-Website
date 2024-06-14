@@ -66,16 +66,16 @@ const Footer = () => {
         <h5>FOLLOW US</h5>
         <span>
            <a href="https://www.facebook.com/Gabinoisltd/" target="_blank" rel="noopener noreferrer" className="text-white mx-3">
-              <FontAwesomeIcon icon="fa-solid fa-facebook" size="2x" />
+              <FontAwesomeIcon icon="fa-brands fa-facebook" size="2x" />
             </a>
             <a href="https://twitter.com/gabinoisl" target="_blank" rel="noopener noreferrer" className="text-white mx-3">
-              <FontAwesomeIcon icon="fa-solid fa-twitter" size="2x" />
+              <FontAwesomeIcon icon="fa-brands fa-twitter" size="2x" />
             </a>
             <a href="https://www.instagram.com/gabino.isl/" target="_blank" rel="noopener noreferrer" className="text-white mx-3">
-              <FontAwesomeIcon icon="fa-solid fa-instagram" size="2x" />
+              <FontAwesomeIcon icon="fa-brands fa-instagram" size="2x" />
             </a>
             <a href="https://api.whatsapp.com/message/P7IGH7JW3Y6WO1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer" className="text-white mx-3">
-              <FontAwesomeIcon icon="fa-solid fa-whatsapp" size="2x" />
+              <FontAwesomeIcon icon="fa-brands fa-whatsapp" size="2x" />
             </a>
         </span>
       </div>

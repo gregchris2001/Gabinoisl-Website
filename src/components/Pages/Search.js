@@ -22,11 +22,17 @@ const Search = () => {
           .map((block) => block.children.map((child) => child.text).join(" "))
           .join(" ");
 
-        const nameScore = calculateSimilarityScore(product.title, searchItem);
-        const descriptionScore = calculateSimilarityScore(
-          descriptionText,
-          searchItem
-        );
+          const title = product.title || '';
+          const description = descriptionText || '';
+          
+          const nameJaccardScore = calculateJaccardSimilarityScore(title, searchItem);
+          const descriptionJaccardScore = calculateJaccardSimilarityScore(description, searchItem);
+          const nameSubstringScore = calculateSubstringScore(title, searchItem);
+          const descriptionSubstringScore = calculateSubstringScore(description, searchItem);
+
+          // Combine scores with weights
+          const nameScore = (nameJaccardScore * 0.7) + (nameSubstringScore * 0.3);
+          const descriptionScore = (descriptionJaccardScore * 0.7) + (descriptionSubstringScore * 0.3);
 
         const totalScore = (nameScore + descriptionScore) / 2; // Average score
         return { ...product, score: totalScore };
@@ -39,18 +45,29 @@ const Search = () => {
     return sortedProducts;
   }
 
-  function calculateSimilarityScore(str1, str2) {
+  function calculateJaccardSimilarityScore(str1, str2) {
+    if (!str1 || !str2) return 0;
+
     // Split the strings into individual words
-    const words1 = str1.toLowerCase().split(" ");
-    const words2 = str2.toLowerCase().split(" ");
+    const words1 = str1.toLowerCase().replace(/[^a-z0-9\s]/g, '').split(' ');
+    const words2 = str2.toLowerCase().replace(/[^a-z0-9\s]/g, '').split(' ');
 
     // Find the intersection of words
-    const intersection = words1.filter((word) => words2.includes(word));
+    const intersection = words1.filter(word => words2.includes(word));
+
     // Calculate the Jaccard similarity coefficient
-    const similarityScore =
-      intersection.length /
-      (words1.length + words2.length - intersection.length);
+    const unionLength = words1.length + words2.length - intersection.length;
+    const similarityScore = unionLength === 0 ? 0 : intersection.length / unionLength;
     return similarityScore;
+  }
+
+  function calculateSubstringScore(str1, str2) {
+    if (!str1 || !str2) return 0;
+
+    const normalizedStr1 = str1.toLowerCase();
+    const normalizedStr2 = str2.toLowerCase();
+
+    return normalizedStr1.includes(normalizedStr2) ? 1 : 0;
   }
 
   //   console.log(productData, product);

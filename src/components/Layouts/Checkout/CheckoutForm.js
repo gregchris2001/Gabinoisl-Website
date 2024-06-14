@@ -70,7 +70,7 @@ const CheckoutForm = ({totalAmount, cartData}) => {
     publicKey,
     text: "PROCEED WITH PAYMENT",
     onSuccess: (reference) =>
-      console.logz(reference),
+      console.log(reference),
     onClose: () => alert("Wait! Don't leave :("),
   }
 
@@ -163,7 +163,10 @@ const CheckoutForm = ({totalAmount, cartData}) => {
         <span style={{ marginTop: '10px', display: 'inline-block', marginLeft: '8px' }}>
         </span>
       </Button> */}
-      <PaystackButton {...componentProps} />
+      <PaystackButton 
+        className='btn btn-danger'
+        {...componentProps} 
+      />
     </Form>
   );
 };

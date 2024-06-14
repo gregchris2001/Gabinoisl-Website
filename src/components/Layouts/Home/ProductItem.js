@@ -1,5 +1,5 @@
 import { useContext, useState, useEffect } from "react";
-import { Card, Button, Row, Col } from "react-bootstrap";
+import { Card, Button, Row, Col, Alert } from "react-bootstrap";
 import QuantityButtonGroup from "../Product/QuantityButtonGroup";
 import { useNavigate } from "react-router-dom";
 import ProductContext from "../../../store/product-context";
@@ -10,6 +10,8 @@ const ProductItem = ({ product }) => {
   const { title, images, price } = product;
   const [inCart, setInCart] = useState(false);
   const [quantity, setQuantity] = useState(1);
+  const [alertMessage, setAlertMessage] = useState(null);
+  const [showAlert, setShowAlert] = useState(false);
   const navigate = useNavigate();
 
   const productPageHandler = () => {
@@ -30,8 +32,10 @@ const ProductItem = ({ product }) => {
   const handleAddToCart = () => {
     // Add product to cart with quantity
     const cartProduct = { ...product, quantity: quantity };
-      console.log(cartProduct);
+    console.log(cartProduct);
     addCartData(cartProduct);
+    setAlertMessage('Added to cart');
+    setShowAlert(true);
   };
 
   const handleQuantityChange = (newQuantity) => {
@@ -47,6 +51,8 @@ const ProductItem = ({ product }) => {
   const handleRemoveCartData = () => {
     if (inCart) {
       removeCartData(product.slug);
+      setAlertMessage('Removed from cart');
+      setShowAlert(true);
     }
   };
 
@@ -55,57 +61,66 @@ const ProductItem = ({ product }) => {
           return 'Out of Stock';  // No stock available
       }
       if (inCart) {
-          return 'Added to Cart';  // Item is in the cart
+          return 'Remove From Cart';  // Item is in the cart
       }
       return 'Add to Cart';  // Item can be added to cart
   };
 
   return (
-    <Card className="product-item" style={{ width: "10rem", alignItems: 'center', paddingBottom: '1rem', }}>
-      <Row onClick={productPageHandler}>
-        <Card.Img 
-          variant="top" 
-          src={images && images.length > 0 ? images[0].asset.url : "https://via.placeholder.com/150"}
-          style={{ height: "12rem", }} 
-        />
-        <Card.Body>
-          <Card.Title style={{ fontSize: 15, }}>{title}</Card.Title>
-          <Card.Text
-            style={{ color: "#EC2D01", fontSize: 15, fontWeight: "600" }}
-          >
-            ₦ {price}
-          </Card.Text>
-          <Card.Text
-            style={{ color: "#B5B5B5", fontSize: 10, fontWeight: "600" }}
-          >
-            24-48 hours Delivery within Lagos
-          </Card.Text>
-          <Card.Text style={{ color: "blue", fontSize: 10, fontWeight: "600" }}>
-            Fast Delivery
-          </Card.Text>
-        </Card.Body>
-      </Row>
-      <Row style={{ width: "100%", gap: " 0.5rem", textAlign: "center", }}>
-        <Col>
-          <Button
-            variant={inCart ? "secondary" : "danger"}
-            onClick={handleAddToCart}
-            disabled={inCart ||product.total_quantity <= 0}
-          >
-            {getButtonText()}
-          </Button>
-        </Col>
-        <Col>
-          <QuantityButtonGroup
-            totalQuantity={product.total_quantity}
-            quantity={quantity}
-            onQuantityChange={handleQuantityChange}
-            removeCartDataHandler={handleRemoveCartData}
-            inCart={inCart}
+    <>
+      {showAlert && (
+        <Alert variant="success" onClose={() => setShowAlert(false)} dismissible>
+          {alertMessage}
+        </Alert>
+      )}
+      
+      <Card className="product-item" style={{ width: "10rem", alignItems: 'center', paddingBottom: '1rem', }}>
+        <Row onClick={productPageHandler}>
+          <Card.Img 
+            variant="top" 
+            src={images && images.length > 0 ? images[0].asset.url : "https://via.placeholder.com/150"}
+            style={{ height: "12rem", }} 
           />
-        </Col>
-      </Row>
-    </Card>
+          <Card.Body>
+            <Card.Title style={{ fontSize: 15, }}>{title}</Card.Title>
+            <Card.Text
+              style={{ color: "#EC2D01", fontSize: 15, fontWeight: "600" }}
+            >
+              ₦ {price}
+            </Card.Text>
+            <Card.Text
+              style={{ color: "#B5B5B5", fontSize: 10, fontWeight: "600" }}
+            >
+              24-48 hours Delivery within Lagos
+            </Card.Text>
+            <Card.Text style={{ color: "blue", fontSize: 10, fontWeight: "600" }}>
+              Fast Delivery
+            </Card.Text>
+          </Card.Body>
+        </Row>
+        <Row style={{ width: "100%", gap: " 0.5rem", textAlign: "center", }}>
+          <Col>
+            <Button
+              variant={inCart ? "secondary" : "dark"}
+              onClick={inCart ? handleRemoveCartData : handleAddToCart}
+              disabled={product.total_quantity <= 0}
+            >
+              {getButtonText()}
+            </Button>
+          </Col>
+          <Col>
+            <QuantityButtonGroup
+              totalQuantity={product.total_quantity}
+              quantity={quantity}
+              onQuantityChange={handleQuantityChange}
+              removeCartDataHandler={handleRemoveCartData}
+              inCart={inCart}
+            />
+          </Col>
+        </Row>
+      </Card>
+    </>
+    
   );
 };
 
