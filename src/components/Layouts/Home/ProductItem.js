@@ -1,17 +1,15 @@
 import { useContext, useState, useEffect } from "react";
-import { Card, Button, Row, Col, Alert } from "react-bootstrap";
+import { Card, Button, Row, Col } from "react-bootstrap";
 import QuantityButtonGroup from "../Product/QuantityButtonGroup";
 import { useNavigate } from "react-router-dom";
 import ProductContext from "../../../store/product-context";
 
-const ProductItem = ({ product }) => {
+const ProductItem = ({ product, setShowAlert, setAlertMessage }) => {
   const { cartData, addCartData, changeCartProductQuantity, removeCartData } =
     useContext(ProductContext);
   const { title, images, price } = product;
   const [inCart, setInCart] = useState(false);
   const [quantity, setQuantity] = useState(1);
-  const [alertMessage, setAlertMessage] = useState(null);
-  const [showAlert, setShowAlert] = useState(false);
   const navigate = useNavigate();
 
   const productPageHandler = () => {
@@ -67,13 +65,7 @@ const ProductItem = ({ product }) => {
   };
 
   return (
-    <>
-      {showAlert && (
-        <Alert variant="success" onClose={() => setShowAlert(false)} dismissible>
-          {alertMessage}
-        </Alert>
-      )}
-      
+    <> 
       <Card className="product-item" style={{ width: "10rem", alignItems: 'center', paddingBottom: '1rem', }}>
         <Row onClick={productPageHandler}>
           <Card.Img 
@@ -101,7 +93,7 @@ const ProductItem = ({ product }) => {
         <Row style={{ width: "100%", gap: " 0.5rem", textAlign: "center", }}>
           <Col>
             <Button
-              variant={inCart ? "secondary" : "dark"}
+              variant={inCart ? "dark" : "danger"}
               onClick={inCart ? handleRemoveCartData : handleAddToCart}
               disabled={product.total_quantity <= 0}
             >
