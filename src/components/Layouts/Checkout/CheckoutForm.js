@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import { Form, Button, Row, Col } from 'react-bootstrap';
+import { Form, Button, Row, Col, Modal } from 'react-bootstrap';
 import { PaystackButton } from 'react-paystack';
 
 const CheckoutForm = ({totalAmount, cartData}) => {
@@ -14,6 +14,9 @@ const CheckoutForm = ({totalAmount, cartData}) => {
     phoneNumber: '',
     notes: ''
   });
+
+  const [showModal, setShowModal] = useState(false);
+  const [modalMessage, setModalMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -37,6 +40,17 @@ const CheckoutForm = ({totalAmount, cartData}) => {
       value: `Quantity: ${item.quantity}, Total Price: ₦${totalPrice}`,
     };
   });
+
+  const handleSuccess = (reference) => {
+    setModalMessage(`Payment Successful! This is your reference number ${reference}`);
+    setShowModal(true);
+    console.log(reference);
+  };
+
+  const handleClose = () => {
+    setModalMessage('Are you sure you want to cancel payment?');
+    setShowModal(true);
+  };
 
   const componentProps = {
     email : formData.email,
@@ -69,105 +83,119 @@ const CheckoutForm = ({totalAmount, cartData}) => {
     },
     publicKey,
     text: "PROCEED WITH PAYMENT",
-    onSuccess: (reference) =>
-      console.log(reference),
-    onClose: () => alert("Wait! Don't leave :("),
+    onSuccess: handleSuccess,
+    onClose: handleClose,
   }
 
   console.log(componentProps);
 
   return (
-    <Form id="paymentForm" onSubmit={handleSubmit}>
-      <Row>
-        <Col md={6} className="mb-3">
-          <Form.Label>First name</Form.Label>
+    <>
+      <Form id="paymentForm" onSubmit={handleSubmit}>
+        <Row>
+          <Col md={6} className="mb-3">
+            <Form.Label>First name</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder=""
+              name="firstName"
+              value={formData.firstName}
+              onChange={handleChange}
+              required
+            />
+          </Col>
+          <Col md={6} className="mb-3">
+            <Form.Label>Last name</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder=""
+              name="lastName"
+              value={formData.lastName}
+              onChange={handleChange}
+              required
+            />
+          </Col>
+        </Row>
+        <Form.Group className="mb-3">
+          <Form.Label>Email</Form.Label>
           <Form.Control
             type="text"
             placeholder=""
-            name="firstName"
-            value={formData.firstName}
+            name="email"
+            value={formData.email}
             onChange={handleChange}
             required
           />
-        </Col>
-        <Col md={6} className="mb-3">
-          <Form.Label>Last name</Form.Label>
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Delivery Address</Form.Label>
           <Form.Control
             type="text"
-            placeholder=""
-            name="lastName"
-            value={formData.lastName}
+            placeholder="1234 Main St"
+            name="address"
+            value={formData.address}
             onChange={handleChange}
             required
           />
-        </Col>
-      </Row>
-      <Form.Group className="mb-3">
-        <Form.Label>Email</Form.Label>
-        <Form.Control
-          type="text"
-          placeholder=""
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-      </Form.Group>
-      <Form.Group className="mb-3">
-        <Form.Label>Delivery Address</Form.Label>
-        <Form.Control
-          type="text"
-          placeholder="1234 Main St"
-          name="address"
-          value={formData.address}
-          onChange={handleChange}
-          required
-        />
-      </Form.Group>
-      <Form.Group className="mb-3">
-        <Form.Label>Phone Number</Form.Label>
-        <Form.Control
-          type="text"
-          placeholder="08056003042@gmail.com"
-          name="phoneNumber"
-          value={formData.phoneNumber}
-          onChange={handleChange}
-          required
-        />
-      </Form.Group>
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Phone Number</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="08056003042@gmail.com"
+            name="phoneNumber"
+            value={formData.phoneNumber}
+            onChange={handleChange}
+            required
+          />
+        </Form.Group>
 
-      <Form.Group className="mb-3">
-        <Form.Label>Notes</Form.Label>
-        <Form.Control
-          as="textarea"
-          rows={3}
-          placeholder="Enter notes here"
-          name="notes"
-          value={formData.notes}
-          onChange={handleChange}
-        />
-      </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Notes</Form.Label>
+          <Form.Control
+            as="textarea"
+            rows={3}
+            placeholder="Enter notes here"
+            name="notes"
+            value={formData.notes}
+            onChange={handleChange}
+          />
+        </Form.Group>
 
-      <hr className="mb-4" />
+        <hr className="mb-4" />
 
-      <h4 className="mb-3">Payment</h4>
-      <hr className="mb-4" />
-      
-      {/* <Button variant="danger" type="submit">
-        <img
-          src="https://paymentgateway.interswitchgroup.com/paymentgateway/public/images/isw_paynow_btn.png"
-          alt="Pay Now"
-          style={{ float: 'left' }}
-          className="isw-pay-logo"
+        <h4 className="mb-3">Payment</h4>
+        <hr className="mb-4" />
+
+        {/* <Button variant="danger" type="submit">
+          <img
+            src="https://paymentgateway.interswitchgroup.com/paymentgateway/public/images/isw_paynow_btn.png"
+            alt="Pay Now"
+            style={{ float: 'left' }}
+            className="isw-pay-logo"
+          />
+          <span style={{ marginTop: '10px', display: 'inline-block', marginLeft: '8px' }}>
+          </span>
+        </Button> */}
+        <PaystackButton 
+          className='btn btn-danger'
+          {...componentProps} 
         />
-        <span style={{ marginTop: '10px', display: 'inline-block', marginLeft: '8px' }}>
-        </span>
-      </Button> */}
-      <PaystackButton 
-        className='btn btn-danger'
-        {...componentProps} 
-      />
-    </Form>
+      </Form>
+
+      <Modal show={showModal} onHide={() => setShowModal(false)}>
+        <Modal.Header closeButton>
+          <Modal.Title>Payment Status</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>{modalMessage}</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => setShowModal(false)}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
+
   );
 };
 
