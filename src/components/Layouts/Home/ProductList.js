@@ -1,18 +1,20 @@
 import ProductItem from "./ProductItem";
-import { Alert } from "react-bootstrap";
+import CustomAlert from "../../Ui/CustomAlert";
 import { useState } from "react";
 
 const ProductList = ({ productData }) => {
   const [showAlert, setShowAlert] = useState(false);
   const [alertMessage, setAlertMessage] = useState(null);
+  const [alertVariant, setAlertVariant] = useState('success');
 
   return (
     <>
-      {showAlert && (
-        <Alert variant="danger" onClose={() => setShowAlert(false)} dismissible>
-          {alertMessage}
-        </Alert>
-      )}
+      <CustomAlert
+        show={showAlert}
+        onClose={() => setShowAlert(false)}
+        message={alertMessage}
+        variant={alertVariant}
+      />
 
       <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center", width: "100%", }}>
         {productData?.map((product, index) => (
@@ -21,6 +23,7 @@ const ProductList = ({ productData }) => {
             product={product} 
             setShowAlert={setShowAlert}
             setAlertMessage={setAlertMessage}
+            setAlertVariant={setAlertVariant}
           />
         ))}
       </div>

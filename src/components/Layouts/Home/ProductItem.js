@@ -4,7 +4,7 @@ import QuantityButtonGroup from "../Product/QuantityButtonGroup";
 import { useNavigate } from "react-router-dom";
 import ProductContext from "../../../store/product-context";
 
-const ProductItem = ({ product, setShowAlert, setAlertMessage }) => {
+const ProductItem = ({ product, setShowAlert, setAlertMessage, setAlertVariant }) => {
   const { cartData, addCartData, changeCartProductQuantity, removeCartData } =
     useContext(ProductContext);
   const { title, images, price } = product;
@@ -33,6 +33,7 @@ const ProductItem = ({ product, setShowAlert, setAlertMessage }) => {
     console.log(cartProduct);
     addCartData(cartProduct);
     setAlertMessage('Added to cart');
+    setAlertVariant('success');
     setShowAlert(true);
   };
 
@@ -50,6 +51,7 @@ const ProductItem = ({ product, setShowAlert, setAlertMessage }) => {
     if (inCart) {
       removeCartData(product.slug);
       setAlertMessage('Removed from cart');
+      setAlertVariant('danger');
       setShowAlert(true);
     }
   };

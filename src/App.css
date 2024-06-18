@@ -39,11 +39,12 @@ footer a {
 }
 
 .truncate-multi-line {
-  display: -webkit-box;
-  -webkit-line-clamp: 3; /* Number of lines to show */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 3;
+   /* Number of lines to show */
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+   text-overflow: ellipsis;
 }
 
 .loading-overlay {
@@ -57,24 +58,39 @@ footer a {
    justify-content: center;
    align-items: center;
    z-index: 9999;
- }
- 
- .loading-content {
+}
+
+.loading-content {
    display: flex;
    flex-direction: column;
    align-items: center;
- }
- 
- .loading-logo {
-   width: 100px; /* Adjust size as needed */
+}
+
+.loading-logo {
+   width: 100px;
+   /* Adjust size as needed */
    margin-bottom: 20px;
- }
- 
- .loading-spinner {
+}
+
+.loading-spinner {
    width: 3rem;
    height: 3rem;
- }
- 
+}
+
+.custom-alert {
+   position: fixed;
+   top: 20px;
+   left: 50%;
+   transform: translateX(-50%);
+   z-index: 1050;
+   width: 50%;
+   transition: opacity 0.5s ease-in-out;
+}
+
+.custom-alert .alert {
+   margin: 0 auto;
+   text-align: center;
+}
 
 
 @media only screen and (min-width: 768px) {
@@ -99,11 +115,11 @@ footer a {
       gap: 1rem;
    }
 
-   footer > div {
+   footer>div {
       width: 24%;
    }
 
-   footer > div:last-child {
+   footer>div:last-child {
       width: 100%;
       position: relative;
       bottom: 0;
