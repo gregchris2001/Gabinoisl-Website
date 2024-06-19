@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import { FaFacebook } from "react-icons/fa";
+import { FaXTwitter, FaInstagram, FaWhatsapp } from "react-icons/fa6";
 const Footer = () => {
   return (
-    <footer style={{ width: "100%", backgroundColor: "gray", padding: "1.5rem" }}>
+    <footer
+      style={{ width: "100%", backgroundColor: "gray", padding: "1.5rem" }}
+    >
       <div style={{ color: "white" }}>
         <h5>COMPANY</h5>
         <ul>
@@ -65,22 +67,42 @@ const Footer = () => {
       <div style={{ color: "white" }}>
         <h5>FOLLOW US</h5>
         <span>
-           <a href="https://www.facebook.com/Gabinoisltd/" target="_blank" rel="noopener noreferrer" className="text-white mx-3">
-              <FontAwesomeIcon icon="fa-brands fa-facebook" size="2x" />
-            </a>
-            <a href="https://twitter.com/gabinoisl" target="_blank" rel="noopener noreferrer" className="text-white mx-3">
-              <FontAwesomeIcon icon="fa-brands fa-twitter" size="2x" />
-            </a>
-            <a href="https://www.instagram.com/gabino.isl/" target="_blank" rel="noopener noreferrer" className="text-white mx-3">
-              <FontAwesomeIcon icon="fa-brands fa-instagram" size="2x" />
-            </a>
-            <a href="https://api.whatsapp.com/message/P7IGH7JW3Y6WO1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer" className="text-white mx-3">
-              <FontAwesomeIcon icon="fa-brands fa-whatsapp" size="2x" />
-            </a>
+          <a
+            href="https://www.facebook.com/Gabinoisltd/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white mx-3"
+          >
+            <FaFacebook />
+          </a>
+          <a
+            href="https://twitter.com/gabinoisl"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white mx-3"
+          >
+            <FaXTwitter />
+          </a>
+          <a
+            href="https://www.instagram.com/gabino.isl/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white mx-3"
+          >
+            <FaInstagram />
+          </a>
+          <a
+            href="https://api.whatsapp.com/message/P7IGH7JW3Y6WO1?autoload=1&app_absent=0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white mx-3"
+          >
+            <FaWhatsapp />
+          </a>
         </span>
       </div>
       <div style={{ color: "white" }}>
-        <hr/>
+        <hr />
         <p>© 2022-2023, Gabinoisl | Powered by Gregchris™</p>
       </div>
     </footer>

@@ -1,28 +1,27 @@
-import {useState} from 'react';
-import { Form, Button, Row, Col, Modal } from 'react-bootstrap';
-import { PaystackButton } from 'react-paystack';
+import { useState } from "react";
+import { Form, Button, Row, Col, Modal } from "react-bootstrap";
+import { PaystackButton } from "react-paystack";
 
-const CheckoutForm = ({totalAmount, cartData}) => {
-
+const CheckoutForm = ({ totalAmount, cartData }) => {
   const publicKey = "pk_test_15793661a775d86467c092f068aba18ed206f9b3";
   const amount = totalAmount * 100;
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    address: '',
-    phoneNumber: '',
-    notes: ''
+    firstName: "",
+    lastName: "",
+    email: "",
+    address: "",
+    phoneNumber: "",
+    notes: "",
   });
 
   const [showModal, setShowModal] = useState(false);
-  const [modalMessage, setModalMessage] = useState('');
+  const [modalMessage, setModalMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value
+      [name]: value,
     });
   };
 
@@ -42,18 +41,20 @@ const CheckoutForm = ({totalAmount, cartData}) => {
   });
 
   const handleSuccess = (reference) => {
-    setModalMessage(`Payment Successful! This is your reference number ${reference}`);
+    setModalMessage(
+      `Payment Successful! This is your reference number ${reference.reference}`
+    );
     setShowModal(true);
     console.log(reference);
   };
 
   const handleClose = () => {
-    setModalMessage('Are you sure you want to cancel payment?');
+    setModalMessage("Are you sure you want to cancel payment?");
     setShowModal(true);
   };
 
   const componentProps = {
-    email : formData.email,
+    email: formData.email,
     amount,
     metadata: {
       custom_fields: [
@@ -79,13 +80,12 @@ const CheckoutForm = ({totalAmount, cartData}) => {
         },
         ...cartCustomFields,
       ],
-      
     },
     publicKey,
     text: "PROCEED WITH PAYMENT",
     onSuccess: handleSuccess,
     onClose: handleClose,
-  }
+  };
 
   console.log(componentProps);
 
@@ -177,10 +177,7 @@ const CheckoutForm = ({totalAmount, cartData}) => {
           <span style={{ marginTop: '10px', display: 'inline-block', marginLeft: '8px' }}>
           </span>
         </Button> */}
-        <PaystackButton 
-          className='btn btn-danger'
-          {...componentProps} 
-        />
+        <PaystackButton className="btn btn-danger" {...componentProps} />
       </Form>
 
       <Modal show={showModal} onHide={() => setShowModal(false)}>
@@ -195,7 +192,6 @@ const CheckoutForm = ({totalAmount, cartData}) => {
         </Modal.Footer>
       </Modal>
     </>
-
   );
 };
 
