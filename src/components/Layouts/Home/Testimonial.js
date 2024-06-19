@@ -3,10 +3,12 @@ import { Card, Spinner } from "react-bootstrap";
 import sanityClient from "../../../client";
 import TestimonyImg from "../../../images/testimony-img.png";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.min.css";
-import "swiper/swiper.min.css";
-import SwiperCore, { Navigation, Pagination } from "swiper";
-
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import SwiperCore from "swiper";
+import { Navigation, Pagination } from "swiper/modules";
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination]);
 
@@ -71,8 +73,12 @@ const Testimonials = () => {
                   style={{ width: "100%", height: "232px", objectFit: "cover" }}
                 />
                 <Card.Body>
-                  <Card.Text style={{ color: "black" }}>{ctx.testimonial || ctx.text}</Card.Text>
-                  <Card.Text style={{ color: "black", fontWeight: "bold" }}>{ctx.name}</Card.Text>
+                  <Card.Text style={{ color: "black" }}>
+                    {ctx.testimonial || ctx.text}
+                  </Card.Text>
+                  <Card.Text style={{ color: "black", fontWeight: "bold" }}>
+                    {ctx.name}
+                  </Card.Text>
                 </Card.Body>
               </Card>
             </SwiperSlide>
