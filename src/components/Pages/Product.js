@@ -1,6 +1,7 @@
 import { useContext, useState, useEffect } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import { Container, Row, Col, Button, Alert } from "react-bootstrap";
+import CustomAlert from "../Ui/CustomAlert"
 import ImageGrid from "../Layouts/Product/ImageGrid";
 import ShippingDetailsCard from "../Layouts/Product/ShippingDetailsCard";
 import QuantityButtonGroup from "../Layouts/Product/QuantityButtonGroup";
@@ -23,6 +24,7 @@ const Product = () => {
   const [inCart, setInCart] = useState(false);
   const [quantity, setQuantity] = useState(1);
   const [alertMessage, setAlertMessage] = useState(null); 
+  const [alertVariant, setAlertVariant] = useState('success');
   const [showAlert, setShowAlert] = useState(false);
 
   const productFromState = state && state.product;
@@ -59,6 +61,7 @@ useEffect(() => {
     console.log(cartProduct);
     addCartData(cartProduct);
     setAlertMessage('Added to cart');
+    setAlertVariant('success');
     setShowAlert(true);
   };
 
@@ -76,6 +79,7 @@ useEffect(() => {
     if (inCart) {
       removeCartData(product.slug);
       setAlertMessage('Removed from cart');
+      setAlertVariant('danger');
       setShowAlert(true);
     }
   };
@@ -92,11 +96,13 @@ useEffect(() => {
 
   return (
     <>
-      {showAlert && (
-        <Alert variant="success" onClose={() => setShowAlert(false)} dismissible>
-          {alertMessage}
-        </Alert>
-      )}
+      <CustomAlert
+        show={showAlert}
+        onClose={() => setShowAlert(false)}
+        message={alertMessage}
+        variant={alertVariant}
+      />
+
       {product ? (
         <Container>
           <Row>

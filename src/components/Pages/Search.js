@@ -1,10 +1,12 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect, useContext, Children } from "react";
 import ProductContext from "../../store/product-context";
+import Loader from "../Ui/Loader"
 import ProductsWithPagination from "../Layouts/Home/ProductsWithPagination";
 
 const Search = () => {
   const [searchResults, setSearchResults] = useState([]);
+  const [isSearching, setIsSearching] = useState(true);
   const { product } = useParams();
   const navigate = useNavigate();
 
@@ -12,6 +14,7 @@ const Search = () => {
 
   useEffect(() => {
     setSearchResults(searchProducts(productData, product));
+    setIsSearching(false);
   }, [productData, product]);
 
   function searchProducts(productList, searchItem, threshold = 0.05) {
@@ -76,7 +79,10 @@ const Search = () => {
 
   return (
     <>
-      <ProductsWithPagination productData={searchResults} />
+      {isSearching ? 
+        <Loader /> :
+        <ProductsWithPagination productData={searchResults} /> 
+      }
     </>
   );
 };

@@ -17,15 +17,19 @@ const ProductList = ({ productData }) => {
       />
 
       <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center", width: "100%", }}>
-        {productData?.map((product, index) => (
-          <ProductItem 
-            key={index} 
-            product={product} 
-            setShowAlert={setShowAlert}
-            setAlertMessage={setAlertMessage}
-            setAlertVariant={setAlertVariant}
-          />
-        ))}
+        {productData.length > 0 ?
+          productData?.map((product, index) => (
+            <ProductItem 
+              key={index} 
+              product={product} 
+              setShowAlert={setShowAlert}
+              setAlertMessage={setAlertMessage}
+              setAlertVariant={setAlertVariant}
+            />
+          ))
+          :
+          <p>No Products Found</p>
+        }
       </div>
     </>
   );
